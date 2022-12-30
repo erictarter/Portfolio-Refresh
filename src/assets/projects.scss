@@ -53,6 +53,25 @@
         background: url('https://images.unsplash.com/photo-1523297554394-dc159677ffe1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60')
         no-repeat center center/cover;
     }
+
+    .project-description-lg {
+        color: rgb(255, 255, 255);
+        opacity: 0;
+        height: 100%;
+        align-items: center;
+        transition: .3s ease all;
+        transform: translateY(5%);
+    }
+    .project-description-lg:hover {
+        opacity: 1;
+        transition: .3s ease all;
+        transform: translateY(0%);
+    }
+    .project-description-mobile {
+        color: white;
+        height: 100%;
+        align-items: center;
+    }
 }
 
 @media (max-width:776px){
