@@ -3,7 +3,6 @@ import { createPinia } from 'pinia'
 // import { defineStore } from 'pinia'
 // import "bootstrap/dist/js/bootstrap.js"
 import VueSmoothScroll from 'vue3-smooth-scroll'
-import VueKinesis from "vue-kinesis";
 import App from './App.vue'
 import './assets/main.scss'
 
@@ -17,7 +16,6 @@ const app = createApp(App)
 app.component("v-icon", OhVueIcon);
 
 app.use(createPinia())
-app.use(VueKinesis)
 app.use(VueSmoothScroll)
 
 app.mount('#app')
