@@ -15,7 +15,8 @@
     "oh-vue-icons": "^1.0.0-rc3",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
-    "vue-kinesis": "^2.0.5"
+    "vue-kinesis": "^2.0.5",
+    "vue3-smooth-scroll": "^0.8.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",

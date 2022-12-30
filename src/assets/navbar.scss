@@ -68,6 +68,7 @@
 }
 .toggle-opened {
     transition: .3s ease all;
+    position: fixed;
 }
 .toggle-opened:hover {
     color: hsla(176, 91%, 82%, .8);

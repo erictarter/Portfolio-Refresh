@@ -10,7 +10,7 @@ import { defineComponent } from 'vue'
         <div class="w-50">
             <h2 class=''>Check Out My Blog Post</h2>
         </div>
-            <a href="#" class="blog-link"></a>
+            <a target="_blank" href="https://musing-gates-809017.netlify.app/" class="blog-link"></a>
       </div>
 </template>
 

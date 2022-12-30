@@ -1,9 +1,10 @@
 .footer {
     margin-top: 6rem !important;
-    background: hsla(188, 55%, 68%, .1);
+    // background: hsla(188, 55%, 68%, .1);
+    border-top: 1px rgb(154, 156, 177) solid;
 
     a {
-        color: rgb(106, 84, 98);
+        color: rgb(54, 55, 65);
         margin-left: -1rem;
     }
 

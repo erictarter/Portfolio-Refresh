@@ -24,7 +24,7 @@ import { defineComponent } from 'vue'
 
 <template>
       <div class="d-flex flex-column d-md-none">
-        <div class="d-flex justify-content-between w-100 p-5">
+        <div class="d-flex justify-content-between w-100 mt-4 p-5">
             <div class="brand">
                 <div class="avatar-image"></div>
             </div>
@@ -35,19 +35,19 @@ import { defineComponent } from 'vue'
         <div :class="toggleState ? 'navbar-mobile navbar-mobile-opened p-3' : 'navbar-mobile navbar-mobile-closed'">
             <div :class="toggleState ? 'nav-items-show d-flex flex-column justify-content-around' : 'nav-items-hide'">
                 <div class="d-flex flex-column mx-2">
-                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item my-2">Bio</a>
+                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/$" class="nav-item my-2">Bio</a>
                   <div class="border-animation mx-2"></div>
                 </div>
                 <div class="d-flex flex-column mx-2">                    
-                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item my-2">Projects</a>
+                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/*" class="nav-item my-2">Projects</a>
                   <div class="border-animation mx-2"></div>  
                 </div>
                 <div class="d-flex flex-column mx-2">                  
-                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item my-2">Blog</a>
+                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/" class="nav-item my-2">Blog</a>
                   <div class="border-animation mx-2"></div>  
                 </div>
                 <div class="d-flex flex-column mx-2">                  
-                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item my-2">Socials</a>
+                  <a @click="navToggle" @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/" class="nav-item my-2">Socials</a>
                   <div class="border-animation mx-2"></div> 
                 </div>                   
             </div>

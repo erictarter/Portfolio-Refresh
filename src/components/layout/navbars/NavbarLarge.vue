@@ -9,7 +9,7 @@ import { defineComponent } from 'vue'
     },
     animationLeave(e:any){
         e.target.nextSibling.classList.remove('border-animation-large-active')
-    }
+    },
   }
 })
 </script>
@@ -21,19 +21,19 @@ import { defineComponent } from 'vue'
             </div>
             <div class="nav-items d-flex justify-content-between">
                   <div class="d-flex flex-column mx-2">
-                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item mx-2">Bio</a>
+                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/$" class="nav-item mx-2">Bio</a>
                     <div class="border-animation-large"></div>
                   </div>
                   <div class="d-flex flex-column mx-2">
-                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item mx-2">Projects</a>
+                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/*" class="nav-item mx-2">Projects</a>
                     <div class="border-animation-large"></div>
                   </div>
                   <div class="d-flex flex-column mx-2">
-                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item mx-2">Blog</a>
+                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/" class="nav-item mx-2">Blog</a>
                     <div class="border-animation-large"></div>
                   </div>
                   <div class="d-flex flex-column">
-                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#" class="nav-item mx-2">Socials</a>
+                    <a @mouseenter="borderAnimation" @mouseleave="animationLeave" href="#/" class="nav-item mx-2">Socials</a>
                     <div class="border-animation-large"></div>
                   </div>                                    
             </div>

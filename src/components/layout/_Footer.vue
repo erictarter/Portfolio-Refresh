@@ -6,15 +6,15 @@ import { defineComponent } from 'vue'
 </script>
 
 <template>
-  <div class="footer d-flex justify-content-between align-items-center mt-4 py-3 px-3 px-sm-5">
+  <div id="/" class="footer d-flex justify-content-between align-items-center mt-4 py-3 px-3 px-sm-5">
     <div>
       <p class="fs-5 text-center">© Eric Tarter</p>
     </div>
     <div class="socials">
-      <a href="">
+      <a target="_blank" href="https://github.com/erictarter">
         <i class="lni lni-github fs-3"></i>
       </a>
-      <a href="">
+      <a target="_blank" href="https://www.linkedin.com/in/eric-tarter-b2549a203/">
         <i class="lni lni-linkedin-original fs-3"></i>
       </a>
     </div>
