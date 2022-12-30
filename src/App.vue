@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import Header from './components/layout/_Header.vue'
+import Bio from './components/layout/_Bio.vue'
+import Projects from './components/layout/_Projects.vue'
+import Skills from './components/layout/_Skills.vue'
+import Blog from './components/layout/_Blog.vue'
 </script>
 
 <template>
       <Header></Header>
+      <Bio />
+      <Projects />
+      <Skills />
+      <Blog />
 </template>
 
 <style scoped>
