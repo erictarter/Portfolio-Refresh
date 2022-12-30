@@ -4,6 +4,7 @@ import Bio from './components/layout/_Bio.vue'
 import Projects from './components/layout/_Projects.vue'
 import Skills from './components/layout/_Skills.vue'
 import Blog from './components/layout/_Blog.vue'
+import Footer from './components/layout/_Footer.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Blog from './components/layout/_Blog.vue'
       <Projects />
       <Skills />
       <Blog />
+      <Footer />
 </template>
 
 <style scoped>
