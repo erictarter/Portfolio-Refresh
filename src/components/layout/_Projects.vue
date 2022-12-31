@@ -29,7 +29,7 @@ import { defineComponent } from 'vue'
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Sports Betting App. Fill out a betslip and place a hypothetical bet</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Sports Betting App</p>
             </a>
-            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://mystifying-mahavira-4e8faa.netlify.app/" class="project">
+            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://mystifying-mahavira-4e8faa.netlify.app/" class="project" id="/#">
               <div class="project-overlay d-none d-md-flex"></div>
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Online Sunglasses Store with shopping cart</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Online Store W/shopping cart</p>
@@ -40,7 +40,7 @@ import { defineComponent } from 'vue'
               <p class="project-description-mobile d-flex d-md-none p-2">Home Budget</p>            
             </a>
             <a href="#/#" @click='showMoreProjects' class="show-more-projects btn d-none p-2 fs-6">Show More</a>
-            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://tender-feynman-0a5def.netlify.app/" class="project more-project" id="/#">
+            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://tender-feynman-0a5def.netlify.app/" class="project more-project">
               <div class="project-overlay d-none d-md-flex"></div>
               <p class="fs-5 project-description-lg px-3 d-none d-md-flex">Get up to date covid data from the Covid Tracking Data API</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Covid Data</p>              
