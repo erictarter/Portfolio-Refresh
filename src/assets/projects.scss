@@ -145,6 +145,12 @@
         display: none;
         transition: .5s ease all;
     }
+    .project:nth-child(5):active {
+        border-color: transparent !important;
+    }    
+    .project:nth-child(5):focus {
+        border-color: transparent !important;
+    }
     .project:nth-child(6) {
         display: none;
         transition: .5s ease all;
