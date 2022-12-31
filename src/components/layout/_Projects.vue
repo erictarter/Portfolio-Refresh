@@ -29,12 +29,12 @@ import { defineComponent } from 'vue'
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Sports Betting App. Fill out a betslip and place a hypothetical bet</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Sports Betting App</p>
             </a>
-            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://mystifying-mahavira-4e8faa.netlify.app/" class="project" id="/#">
+            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://mystifying-mahavira-4e8faa.netlify.app/" class="project">
               <div class="project-overlay d-none d-md-flex"></div>
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Online Sunglasses Store with shopping cart</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Online Store W/shopping cart</p>
             </a>
-            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://gifted-kepler-32c70b.netlify.app/" class="project">
+            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://gifted-kepler-32c70b.netlify.app/" class="project" id="/#">
               <div class="project-overlay d-none d-md-flex"></div>
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Find Out how much house you can afford in this questionaire</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Home Budget</p>            
