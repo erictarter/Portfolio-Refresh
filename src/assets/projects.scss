@@ -16,6 +16,7 @@
         transition: .2s ease all;
         cursor: pointer;
         opacity: .8;
+        position: relative;
     }
     .project:hover {
         opacity: 1;
@@ -70,9 +71,21 @@
     .project-description-mobile {
         color: white;
         height: 100%;
-        align-items: center;
+        // align-items: center;
+        justify-content: center;
+        font-size: 1rem;
     }
 }
+
+.project-overlay {
+    background: rgba(43, 41, 41, .4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (max-width:776px){
     .projects {

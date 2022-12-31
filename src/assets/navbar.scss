@@ -135,3 +135,9 @@
 .menu-toggle {
     cursor: pointer;
 }
+
+@media (max-width: 420px) {
+    .border-animation {
+        display: none;
+    }
+}
