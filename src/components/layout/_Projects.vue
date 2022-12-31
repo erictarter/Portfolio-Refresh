@@ -34,13 +34,13 @@ import { defineComponent } from 'vue'
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Online Sunglasses Store with shopping cart</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Online Store W/shopping cart</p>
             </a>
-            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://gifted-kepler-32c70b.netlify.app/" class="project" id="/#">
+            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://gifted-kepler-32c70b.netlify.app/" class="project">
               <div class="project-overlay d-none d-md-flex"></div>
               <p class="fs-5 project-description-lg d-none px-3 d-md-flex">Find Out how much house you can afford in this questionaire</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Home Budget</p>            
             </a>
             <a href="#/#" @click='showMoreProjects' class="show-more-projects btn d-none p-2 fs-6">Show More</a>
-            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://tender-feynman-0a5def.netlify.app/" class="project more-project">
+            <a @mouseenter="showOverlay" @mouseleave="hideOverlay" target="_blank" href="https://tender-feynman-0a5def.netlify.app/" class="project more-project" id="/#">
               <div class="project-overlay d-none d-md-flex"></div>
               <p class="fs-5 project-description-lg px-3 d-none d-md-flex">Get up to date covid data from the Covid Tracking Data API</p>
               <p class="project-description-mobile d-flex d-md-none p-2">Covid Data</p>              
