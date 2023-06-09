@@ -12,14 +12,6 @@ import { defineComponent } from 'vue'
           <h1>Front-End Developer</h1>
           <p class="fs-5">Hi, my name is Eric Tarter. I am a Front-End Web Developer Living in the Pacific Northwest.</p>
         </div>
-        <!-- <div class="bio-skill">
-          <v-icon class="mx-md-3 mx-2 skill-icon" name="io-logo-vue" />
-          <v-icon class="mx-md-3 mx-2 skill-icon" name="co-react" />
-          <v-icon class="mx-md-3 mx-2 skill-icon" name="co-sass-alt" />
-          <v-icon class="mx-md-3 mx-2 skill-icon" name="co-css3" />
-          <v-icon class="mx-md-3 mx-2 skill-icon" name="la-html5" />
-          <v-icon class="mx-md-3 mx-2 skill-icon" name="co-javascript" />
-        </div> -->
       </div>
 </template>
 

@@ -6,8 +6,8 @@ import NavbarMobile from './navbars/NavbarMobile.vue'
 
 <template>
       <div class="nav-section">
-            <NavbarLarge />
-            <NavbarMobile />
+        <NavbarLarge />
+        <NavbarMobile />
       </div>
 </template>
 

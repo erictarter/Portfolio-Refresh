@@ -1,14 +1,10 @@
-.projects-section {
-    // min-height: 80vh;
-}
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5rem;
     place-items: left;
     .project {
-        max-width: 300px;
         width: 100%;
         height: 200px;
         box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
@@ -25,32 +21,23 @@
         box-shadow: hsla(329, 89%, 80%, .4) 5px 5px, hsla(329, 89%, 80%, 0.3) 10px 10px, hsla(329, 89%, 80%, 0.2) 15px 15px,;
     }
 
-    .project:nth-child(1){
-        background: url('https://images.unsplash.com/photo-1494888427482-242d32babc0b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
-        no-repeat center center/cover;
-    }
 
-    .project:nth-child(2) {
+    .project:nth-child(1) {
         background: url('https://images.unsplash.com/photo-1498511133332-ad66b117f533?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=692&q=80')
         no-repeat center center/cover;
     }
 
-    .project:nth-child(3) {
+    .project:nth-child(2) {
         background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')
         no-repeat center center/cover;
     }
 
-    .project:nth-child(5) {
+    .project:nth-child(3) {
         background: url('https://images.unsplash.com/photo-1584530007341-7ccbb2778bad?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTV8fGNvdmlkJTIwbWFza3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60')
         no-repeat center center/cover;
     }
 
-    .project:nth-child(6) {
-        background: url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80')
-        no-repeat center center/cover;
-    }
-
-    .project:nth-child(7) {
+    .project:nth-child(4) {
         background: url('https://images.unsplash.com/photo-1523297554394-dc159677ffe1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60')
         no-repeat center center/cover;
     }
@@ -70,7 +57,6 @@
     }
     .project-description-mobile {
         color: white;
-        // height: 20%;
         align-items: flex-start;
         justify-content: center;
         font-size: 1rem;
@@ -118,8 +104,6 @@
     h2 {
         text-align: center;
     }
-
-    // REMOVE / COMMENT OUT BELOW TO ERASE SHOW MORE FUNCTION
 
     .show-more-projects {
         display: block !important;
