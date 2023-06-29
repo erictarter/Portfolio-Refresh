@@ -24,8 +24,7 @@
 
 <template>
   <div class="d-flex flex-column d-md-none">
-    <div
-      class="d-flex justify-content-between align-items-center w-100 mt-4 p-5">
+    <div class="d-flex justify-content-between align-items-center w-100 px-5">
       <div class="brand">
         <!-- <div class="avatar-image"></div> -->
         <img src="../../../assets/logo.png" alt="" />
@@ -108,6 +107,6 @@
     opacity: 1;
     /* position: absolute; */
     top: 0;
-    transform: translate(-52.5px, -25px);
+    transform: translate(-57.5px, -27.5px);
   }
 </style>
