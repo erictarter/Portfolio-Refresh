@@ -1,12 +1,13 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+  import { defineComponent } from 'vue'
 
-  export default defineComponent({
-})
+  export default defineComponent({})
 </script>
 
 <template>
-  <div id="/" class="footer d-flex justify-content-between align-items-center mt-4 py-3 px-3 px-sm-5">
+  <div
+    id="/"
+    class="footer d-flex justify-content-between align-items-center py-3 px-3 px-sm-5">
     <div>
       <p class="fs-5 text-center">© Eric Tarter</p>
     </div>
@@ -14,12 +15,13 @@ import { defineComponent } from 'vue'
       <a target="_blank" href="https://github.com/erictarter">
         <i class="lni lni-github fs-3"></i>
       </a>
-      <a target="_blank" href="https://www.linkedin.com/in/eric-tarter-b2549a203/">
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/eric-tarter-b2549a203/">
         <i class="lni lni-linkedin-original fs-3"></i>
       </a>
     </div>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

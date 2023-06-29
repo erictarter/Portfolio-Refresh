@@ -1,25 +1,24 @@
 .footer {
-    margin-top: 6rem !important;
-    // background: hsla(188, 55%, 68%, .1);
-    border-top: 1px rgb(154, 156, 177) solid;
+  margin-top: 2rem !important;
+  // background: hsla(188, 55%, 68%, .1);
+  border-top: 1px rgb(154, 156, 177) solid;
 
-    a {
-        color: rgb(54, 55, 65);
-        margin-left: -1rem;
-    }
+  a {
+    color: rgb(54, 55, 65);
+    margin-left: -1rem;
+  }
 
-    i {
+  i {
     cursor: pointer;
-    transition: .2s ease all;  
-    // transform: translateY(3.5px);      
-
-    }
-    i:hover {
+    transition: 0.2s ease all;
+    // transform: translateY(3.5px);
+  }
+  i:hover {
     color: hsl(188deg, 55%, 68%);
-    transition: .2s ease all;        
-    }
+    transition: 0.2s ease all;
+  }
 
-    p {
-        margin: 0 !important;
-    }
+  p {
+    margin: 0 !important;
+  }
 }
