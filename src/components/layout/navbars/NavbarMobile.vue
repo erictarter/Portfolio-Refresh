@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <div class="d-flex flex-column d-md-none">
+  <div class="d-flex flex-column d-md-none my-3">
     <div class="d-flex justify-content-between align-items-center w-100 px-5">
       <div class="brand">
         <!-- <div class="avatar-image"></div> -->
@@ -102,11 +102,11 @@
 
 <style scoped>
   img {
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     opacity: 1;
     /* position: absolute; */
     top: 0;
-    transform: translate(-57.5px, -27.5px);
+    transform: translateX(-10px);
   }
 </style>

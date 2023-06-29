@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <div class="navbar-large d-none d-md-flex align-items-center px-5">
+  <div class="navbar-large d-none d-md-flex align-items-center px-5 mt-5">
     <div class="brand w-75">
       <!-- <div class="avatar-image-large"></div> -->
       <img src="../../../assets/logo.png" alt="" />
@@ -66,11 +66,11 @@
 
 <style scoped>
   img {
-    width: 230px;
-    height: 230px;
+    width: 100px;
+    height: 100px;
     opacity: 1;
     /* position: absolute; */
     top: 0;
-    transform: translate(-85px, -40px) !important;
+    transform: translateX(-10px) !important;
   }
 </style>
