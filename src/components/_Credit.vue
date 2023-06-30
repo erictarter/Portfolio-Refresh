@@ -5,11 +5,20 @@
 </script>
 
 <template>
-  <div class="credit d-flex w-100 justify-content-center mt-5">
-    Logo design by
-    <a class="p-0 ms-1" target="_blank" href="https://www.designevo.com/">
-      designevo</a
-    >
+  <div
+    class="d-flex flex-column w-100 justify-content-center align-items-center align-items-sm-end mt-5 px-5">
+    <div>
+      Logo design by
+      <a class="p-0 ms-1" target="_blank" href="https://www.designevo.com/">
+        designevo</a
+      >
+    </div>
+    <div>
+      Photos frome
+      <a class="p-0 ms-1" target="_blank" href="https://unsplash.com/">
+        unsplash</a
+      >
+    </div>
   </div>
 </template>
 
