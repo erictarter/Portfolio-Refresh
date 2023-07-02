@@ -14,7 +14,7 @@
       >
     </div>
     <div>
-      Photos frome
+      Photos from
       <a class="p-0 ms-1" target="_blank" href="https://unsplash.com/">
         unsplash</a
       >
