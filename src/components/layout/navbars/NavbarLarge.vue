@@ -1,16 +1,22 @@
-<script lang="ts">
-  import { defineComponent } from 'vue'
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import DarkModeToggler from '@/components/DarkModeToggler.vue'
 
-  export default defineComponent({
-    methods: {
-      borderAnimation(e: any) {
-        e.target.nextSibling.classList.add('border-animation-large-active')
-      },
-      animationLeave(e: any) {
-        e.target.nextSibling.classList.remove('border-animation-large-active')
-      }
-    }
-  })
+  const toggleState = ref(false)
+  const emits = defineEmits(['toggle'])
+
+  function borderAnimation(e: any) {
+    e.target.nextSibling.classList.add('border-animation-large-active')
+  }
+
+  function animationLeave(e: any) {
+    e.target.nextSibling.classList.remove('border-animation-large-active')
+  }
+
+  function handleToggle(value: boolean) {
+    toggleState.value = value
+    emits('toggle', toggleState.value)
+  }
 </script>
 
 <template>
@@ -60,6 +66,9 @@
         >
         <div class="border-animation-large"></div>
       </div>
+      <DarkModeToggler
+        class="d-flex align-items-center nav-item mx-2"
+        @toggle="handleToggle" />
     </div>
   </div>
 </template>
@@ -72,5 +81,6 @@
     /* position: absolute; */
     top: 0;
     transform: translateX(-10px) !important;
+    border-radius: 50%;
   }
 </style>

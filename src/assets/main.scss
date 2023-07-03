@@ -18,7 +18,7 @@ a {
   text-decoration: none;
   color: rgb(20, 204, 189);
   transition: 0.4s;
-  padding : .5rem .8rem;
+  padding: 0.5rem 0.8rem;
   font-weight: bold;
   border-radius: 2px;
 }
@@ -27,8 +27,51 @@ a:hover {
   color: rgb(39, 170, 159);
 }
 
+.night-mode-wrapper {
+  h1,
+  h2,
+  p {
+    color: #fff;
+  }
 
-@media (max-width:450px){
+  .brand {
+    img {
+      border: 2px solid hsla(329, 89%, 80%, 0.9);
+      border-radius: 50%;
+    }
+  }
+
+  a,
+  div {
+    color: #fff;
+  }
+  .credit {
+    a:hover {
+      color: hsl(188deg, 55%, 68%);
+    }
+  }
+  .skills {
+    background-color: hsla(329, 89%, 80%, 0.7);
+  }
+}
+
+.night-mode {
+  width: 100vw;
+  background-color: #333;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+  transition: 0.2s ease all;
+}
+
+.day-mode {
+  background-color: transparent !important;
+  transition: 0.2s ease all;
+}
+
+@media (max-width: 450px) {
   // #app {
   //   padding: .5rem .8rem;
   // }

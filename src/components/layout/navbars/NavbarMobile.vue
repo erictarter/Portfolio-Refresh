@@ -108,5 +108,6 @@
     /* position: absolute; */
     top: 0;
     transform: translateX(-10px);
+    border-radius: 50%;
   }
 </style>

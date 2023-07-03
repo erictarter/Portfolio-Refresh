@@ -6,7 +6,7 @@
 
 <template>
   <div
-    class="d-flex flex-column w-100 justify-content-center align-items-center align-items-sm-end mt-5 px-5">
+    class="d-flex credit flex-column w-100 justify-content-center align-items-center align-items-sm-end mt-5 px-5">
     <div>
       Logo design by
       <a class="p-0 ms-1" target="_blank" href="https://www.designevo.com/">

@@ -8,18 +8,31 @@
   import Credit from './components/_Credit.vue'
   import Footer from './components/layout/_Footer.vue'
   import PollModal from './components/PollModal.vue'
+
+  import { ref } from 'vue'
+
+  const toggleState = ref(false)
+
+  function handleToggle(value: boolean) {
+    toggleState.value = value
+    console.log(toggleState.value)
+  }
 </script>
 
 <template>
-  <Header></Header>
-  <Bio />
-  <Projects />
-  <!-- <Poll /> -->
-  <Skills />
-  <Blog />
-  <Credit />
-  <Footer />
-  <PollModal />
+  <div :class="toggleState ? 'night-mode-wrapper' : ''">
+    <Header @toggle="handleToggle" />
+    <Bio />
+    <Projects />
+    <!-- <Poll /> -->
+    <Skills />
+    <Blog />
+    <Credit />
+    <Footer />
+    <PollModal />
+  </div>
+
+  <div :class="toggleState ? 'night-mode' : 'day-mode'"></div>
 </template>
 
 <style scoped>
