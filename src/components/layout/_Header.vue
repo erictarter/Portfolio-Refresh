@@ -15,7 +15,7 @@
 <template>
   <div class="nav-section">
     <NavbarLarge @toggle="handleToggle" />
-    <NavbarMobile />
+    <NavbarMobile @toggle="handleToggle" />
   </div>
 </template>
 

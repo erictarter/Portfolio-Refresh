@@ -15,7 +15,6 @@
 
   function handleToggle(value: boolean) {
     toggleState.value = value
-    console.log(toggleState.value)
   }
 </script>
 

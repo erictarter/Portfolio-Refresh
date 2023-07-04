@@ -52,4 +52,14 @@
     padding: 0.2em;
     background-color: hsl(236, 100%, 61%);
   }
+
+  @media (max-width: 768px) {
+    .dark-mode-toggler {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .switch {
+      height: 100%;
+    }
+  }
 </style>

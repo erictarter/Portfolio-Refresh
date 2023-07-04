@@ -55,6 +55,17 @@ a:hover {
   }
 }
 
+.day-mode {
+  background-color: transparent;
+  transition: 0.4s ease all;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -999;
+}
+
 .night-mode {
   width: 100vw;
   background-color: #333;
@@ -63,12 +74,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: -999;
-  transition: 0.2s ease all;
-}
-
-.day-mode {
-  background-color: transparent !important;
-  transition: 0.2s ease all;
+  transition: 0.4s ease all;
 }
 
 @media (max-width: 450px) {

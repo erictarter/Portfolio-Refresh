@@ -4,14 +4,12 @@
   height: 100%;
   top: 0;
   .nav-items {
-    height: 25vh;
-    margin-top: 25vh;
     width: 50vw;
   }
   .nav-items-show {
-    height: 30vh;
-    margin-top: 25vh;
+    height: 100vh;
     transform: translateX(0vw);
+    margin-top: 1.5em;
   }
   .nav-items-hide {
     transform: translateX(-175vw);
