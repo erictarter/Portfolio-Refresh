@@ -1,11 +1,45 @@
-<script lang="ts">
+<script setup lang="ts">
   import { ref, onMounted } from 'vue'
-  import { defineComponent } from 'vue'
-  export default defineComponent({})
+  import axios from 'axios'
 
-  const answered = ref(false)
+  const hasvoted = ref(false)
 
-  onMounted(() => {})
+  function checkLocalStorage() {
+    if (localStorage.getItem('hasVoted') === 'yes') {
+      hasvoted.value = true
+    } else {
+      hasvoted.value = false
+    }
+  }
+
+  function voteVue() {
+    localStorage.setItem('hasVoted', 'yes')
+    checkLocalStorage()
+  }
+
+  function voteReact() {
+    localStorage.setItem('hasVoted', 'yes')
+    checkLocalStorage()
+  }
+
+  function voteAngular() {
+    localStorage.setItem('hasVoted', 'yes')
+    checkLocalStorage()
+  }
+
+  function voteOther() {
+    localStorage.setItem('hasVoted', 'yes')
+    checkLocalStorage()
+  }
+
+  function changeVote() {
+    localStorage.setItem('hasVoted', 'no')
+    checkLocalStorage()
+  }
+
+  onMounted(() => {
+    checkLocalStorage()
+  })
 </script>
 
 <template>
@@ -18,24 +52,21 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content p-4">
         <div class="modal-body">
-          <h2>What is your favorite framwork?</h2>
-          <div class="poll d-flex flex-column">
-            <button class="my-1">Vue</button>
-            <button class="my-1">React</button>
-            <button class="my-1">Angular</button>
-            <button class="my-1">Other</button>
+          <div v-if="!hasvoted" class="vote-container">
+            <h2>What is your favorite framwork?</h2>
+            <div class="poll d-flex flex-column">
+              <button @click="voteVue" class="my-1">Vue</button>
+              <button @click="voteReact" class="my-1">React</button>
+              <button @click="voteAngular" class="my-1">Angular</button>
+              <button @click="voteOther" class="my-1">Other</button>
+            </div>
           </div>
-          <div class="poll-answered">show results if answered</div>
+          <div v-else class="poll-answered">
+            <h1>Show Results</h1>
+            <button @click="changeVote" class="my-1">change vote</button>
+          </div>
         </div>
       </div>
-      <!-- <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal">
-            Close
-          </button>
-        </div> -->
     </div>
   </div>
 </template>
