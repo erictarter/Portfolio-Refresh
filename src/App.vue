@@ -2,7 +2,7 @@
   import Header from './components/layout/_Header.vue'
   import Bio from './components/layout/_Bio.vue'
   import Projects from './components/layout/_Projects.vue'
-  import Poll from './components/_Poll.vue'
+  // import Poll from './components/_Poll.vue'
   import Skills from './components/layout/_Skills.vue'
   import Blog from './components/layout/_Blog.vue'
   import Credit from './components/_Credit.vue'
@@ -23,7 +23,7 @@
     <Header @toggle="handleToggle" />
     <Bio />
     <Projects />
-    <!-- <Poll /> -->
+    <Poll />
     <Skills />
     <Blog />
     <Credit />

@@ -20,14 +20,11 @@
     darkModeToggle.value = value
     setTimeout(() => {
       emits('toggle', darkModeToggle.value)
-    }, 250)
+    }, 100)
   }
 
   function closeNav() {
-    toggleState.value = true
-    setTimeout(() => {
-      toggleState.value = false
-    }, 250)
+    toggleState.value = false
   }
 </script>
 
