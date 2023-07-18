@@ -1,10 +1,10 @@
 <script setup lang="ts">
   import { ref, onMounted } from 'vue'
+  import axios from 'axios'
   const vueVotes = ref(0)
   const reactVotes = ref(0)
   const angularVotes = ref(0)
   const otherVotes = ref(0)
-  import axios from 'axios'
 
   const hasvoted = ref(false)
 
@@ -20,7 +20,7 @@
   function getCounterData() {
     axios
       .get('http://localhost:3004/count/all')
-      .then((response) => {
+      .then((response: any) => {
         const data = response.data
         vueVotes.value = data.vueCounter
         reactVotes.value = data.reactCounter
@@ -28,7 +28,7 @@
         otherVotes.value = data.otherCounter
         updatePoll()
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.log(error)
       })
   }
@@ -45,41 +45,41 @@
     if (oldVote === 'vue') {
       axios
         .get(url)
-        .then((response) => {
+        .then((response: any) => {
           const counter = response.data.vueCounter
           vueVotes.value = counter
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.log(error)
         })
     } else if (oldVote === 'react') {
       axios
         .get(url)
-        .then((response) => {
+        .then((response: any) => {
           const counter = response.data.reactCounter
           reactVotes.value = counter
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.log(error)
         })
     } else if (oldVote === 'angular') {
       axios
         .get(url)
-        .then((response) => {
+        .then((response: any) => {
           const counter = response.data.angularCounter
           angularVotes.value = counter
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.log(error)
         })
     } else if (oldVote === 'other') {
       axios
         .get(url)
-        .then((response) => {
+        .then((response: any) => {
           const counter = response.data.otherCounter
           otherVotes.value = counter
         })
-        .catch((error) => {
+        .catch((error: any) => {
           console.log(error)
         })
     }
@@ -106,11 +106,11 @@
     checkLocalStorage()
     axios
       .get('http://localhost:3004/vuecounter/increment')
-      .then((response) => {
+      .then((response: any) => {
         const counter = response.data.vueCounter
         vueVotes.value = counter
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.log(error)
       })
   }
@@ -121,11 +121,11 @@
     checkLocalStorage()
     axios
       .get('http://localhost:3004/reactcounter/increment')
-      .then((response) => {
+      .then((response: any) => {
         const counter = response.data.reactCounter
         reactVotes.value = counter
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.log(error)
       })
   }
@@ -136,11 +136,11 @@
     checkLocalStorage()
     axios
       .get('http://localhost:3004/angularcounter/increment')
-      .then((response) => {
+      .then((response: any) => {
         const counter = response.data.angularCounter
         angularVotes.value = counter
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.log(error)
       })
   }
@@ -151,11 +151,11 @@
     checkLocalStorage()
     axios
       .get('http://localhost:3004/othercounter/increment')
-      .then((response) => {
+      .then((response: any) => {
         const counter = response.data.otherCounter
         otherVotes.value = counter
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.log(error)
       })
   }

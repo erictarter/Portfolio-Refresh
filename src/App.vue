@@ -23,12 +23,12 @@
     <Header @toggle="handleToggle" />
     <Bio />
     <Projects />
-    <!-- <Poll /> -->
+    <Poll />
     <Skills />
     <Blog />
     <Credit />
     <Footer />
-    <PollModal />
+    <!-- <PollModal /> -->
   </div>
 
   <div :class="toggleState ? 'night-mode' : 'day-mode'"></div>
