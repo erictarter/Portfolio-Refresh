@@ -242,8 +242,10 @@
             <template v-if="!hasVoted">
               <div class="vote-container" key="vote">
                 <h2 class="text-center">What is your favorite framework?</h2>
-                <div class="poll d-flex flex-column align-items-center">
-                  <div class="my-2">
+                <div
+                  class="poll d-flex flex-column align-items-center mt-4 mt-2-lg">
+                  <div
+                    class="my-lg-2 mt-2 mt-0-lg d-flex d-lg-block flex-column">
                     <button @click="voteVue" class="my-1 mx-2 btn-green">
                       Vue
                     </button>
@@ -251,7 +253,7 @@
                       React
                     </button>
                   </div>
-                  <div>
+                  <div class="d-flex d-lg-block flex-column">
                     <button @click="voteAngular" class="my-1 mx-2 btn-red">
                       Angular
                     </button>
