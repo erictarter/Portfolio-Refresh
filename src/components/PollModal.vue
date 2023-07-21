@@ -1,25 +1,32 @@
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue'
+  import { ref, onMounted, watch } from 'vue'
   import axios from 'axios'
   const vueVotes = ref(0)
   const reactVotes = ref(0)
   const angularVotes = ref(0)
   const otherVotes = ref(0)
+  const totalVotes = ref(0)
 
-  const hasvoted = ref(false)
+  const hasVoted = ref(false)
+
+  function getPercentageWidth(votes: number): string {
+    const total = totalVotes.value || 1
+    const percentage = (votes / total) * 100
+    return percentage.toFixed(2) + '%'
+  }
+
+  const vuePercentageWidth = ref('0%')
+  const reactPercentageWidth = ref('0%')
+  const angularPercentageWidth = ref('0%')
+  const otherPercentageWidth = ref('0%')
 
   function updatePoll() {
-    console.log(
-      vueVotes.value,
-      reactVotes.value,
-      angularVotes.value,
-      otherVotes.value
-    )
+    getTotalVotes()
   }
 
   function getCounterData() {
     axios
-      .get('http://localhost:3004/count/all')
+      .get('https://amplified-boggy-parrotfish.glitch.me/count/all')
       .then((response: any) => {
         const data = response.data
         vueVotes.value = data.vueCounter
@@ -33,12 +40,18 @@
       })
   }
 
+  function getTotalVotes() {
+    totalVotes.value =
+      vueVotes.value + reactVotes.value + angularVotes.value + otherVotes.value
+  }
+
   function checkLocalStorage() {
     if (localStorage.getItem('hasVoted') === 'yes') {
-      hasvoted.value = true
+      hasVoted.value = true
     } else {
-      hasvoted.value = false
+      hasVoted.value = false
     }
+    getTotalVotes()
   }
 
   function decrementVote(url: string, oldVote: string) {
@@ -84,18 +97,30 @@
         })
     }
     localStorage.setItem('voteType', '')
+    getTotalVotes()
   }
 
   function removeVote() {
-    console.log(localStorage.getItem('voteType'))
     if (localStorage.getItem('voteType') === 'vue') {
-      decrementVote('http://localhost:3004/vuecounter/decrement', 'vue')
+      decrementVote(
+        'https://amplified-boggy-parrotfish.glitch.me/vuecounter/decrement',
+        'vue'
+      )
     } else if (localStorage.getItem('voteType') === 'react') {
-      decrementVote('http://localhost:3004/reactcounter/decrement', 'react')
+      decrementVote(
+        'https://amplified-boggy-parrotfish.glitch.me/reactcounter/decrement',
+        'react'
+      )
     } else if (localStorage.getItem('voteType') === 'angular') {
-      decrementVote('http://localhost:3004/angularcounter/decrement', 'angular')
+      decrementVote(
+        'https://amplified-boggy-parrotfish.glitch.me/angularcounter/decrement',
+        'angular'
+      )
     } else if (localStorage.getItem('voteType') === 'other') {
-      decrementVote('http://localhost:3004/othercounter/decrement', 'other')
+      decrementVote(
+        'https://amplified-boggy-parrotfish.glitch.me/othercounter/decrement',
+        'other'
+      )
     }
   }
 
@@ -105,10 +130,12 @@
 
     checkLocalStorage()
     axios
-      .get('http://localhost:3004/vuecounter/increment')
+      .get('https://amplified-boggy-parrotfish.glitch.me/vuecounter/increment')
       .then((response: any) => {
         const counter = response.data.vueCounter
         vueVotes.value = counter
+        getTotalVotes()
+        animateResults()
       })
       .catch((error: any) => {
         console.log(error)
@@ -120,10 +147,14 @@
     localStorage.setItem('voteType', 'react')
     checkLocalStorage()
     axios
-      .get('http://localhost:3004/reactcounter/increment')
+      .get(
+        'https://amplified-boggy-parrotfish.glitch.me/reactcounter/increment'
+      )
       .then((response: any) => {
         const counter = response.data.reactCounter
         reactVotes.value = counter
+        getTotalVotes()
+        animateResults()
       })
       .catch((error: any) => {
         console.log(error)
@@ -135,10 +166,14 @@
     localStorage.setItem('voteType', 'angular')
     checkLocalStorage()
     axios
-      .get('http://localhost:3004/angularcounter/increment')
+      .get(
+        'https://amplified-boggy-parrotfish.glitch.me/angularcounter/increment'
+      )
       .then((response: any) => {
         const counter = response.data.angularCounter
         angularVotes.value = counter
+        getTotalVotes()
+        animateResults()
       })
       .catch((error: any) => {
         console.log(error)
@@ -150,10 +185,14 @@
     localStorage.setItem('voteType', 'other')
     checkLocalStorage()
     axios
-      .get('http://localhost:3004/othercounter/increment')
+      .get(
+        'https://amplified-boggy-parrotfish.glitch.me/othercounter/increment'
+      )
       .then((response: any) => {
         const counter = response.data.otherCounter
         otherVotes.value = counter
+        getTotalVotes()
+        animateResults()
       })
       .catch((error: any) => {
         console.log(error)
@@ -169,7 +208,23 @@
   onMounted(() => {
     checkLocalStorage()
     getCounterData()
+    animateResults()
   })
+
+  function animateResults() {
+    vuePercentageWidth.value = '0%'
+    reactPercentageWidth.value = '0%'
+    angularPercentageWidth.value = '0%'
+    otherPercentageWidth.value = '0%'
+    setTimeout(() => {
+      vuePercentageWidth.value = getPercentageWidth(vueVotes.value)
+      reactPercentageWidth.value = getPercentageWidth(reactVotes.value)
+      angularPercentageWidth.value = getPercentageWidth(angularVotes.value)
+      otherPercentageWidth.value = getPercentageWidth(otherVotes.value)
+    }, 250)
+  }
+
+  watch(hasVoted, () => animateResults())
 </script>
 
 <template>
@@ -181,27 +236,188 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content p-4">
-        <div class="modal-body">
-          <div v-if="!hasvoted" class="vote-container">
-            <h2>What is your favorite framwork?</h2>
-            <div class="poll d-flex flex-column">
-              <button @click="voteVue" class="my-1">Vue</button>
-              <button @click="voteReact" class="my-1">React</button>
-              <button @click="voteAngular" class="my-1">Angular</button>
-              <button @click="voteOther" class="my-1">Other</button>
-            </div>
-          </div>
-          <div v-else class="poll-answered">
-            <div class="results">vue votes - {{ vueVotes }}</div>
-            <div class="results">react votes - {{ reactVotes }}</div>
-            <div class="results">angular votes - {{ angularVotes }}</div>
-            <div class="results">other votes - {{ otherVotes }}</div>
-            <button @click="changeVote" class="my-1">change vote</button>
-          </div>
+        <div
+          class="modal-body d-flex align-items-center justify-content-center">
+          <transition name="fade" mode="out-in">
+            <template v-if="!hasVoted">
+              <div class="vote-container" key="vote">
+                <h2 class="text-center">What is your favorite framework?</h2>
+                <div class="poll d-flex flex-column align-items-center">
+                  <div class="my-2">
+                    <button @click="voteVue" class="my-1 mx-2 btn-green">
+                      Vue
+                    </button>
+                    <button @click="voteReact" class="my-1 mx-2 btn-blue">
+                      React
+                    </button>
+                  </div>
+                  <div>
+                    <button @click="voteAngular" class="my-1 mx-2 btn-red">
+                      Angular
+                    </button>
+                    <button @click="voteOther" class="my-1 mx-2 btn-yellow">
+                      Other
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </template>
+            <template v-else>
+              <div class="poll-answered w-100" key="poll">
+                <div class="total-votes mb-3">
+                  Total Votes: {{ totalVotes }}
+                </div>
+                <div class="result">
+                  <div class="label">Vue - {{ vuePercentageWidth }}</div>
+                  <div class="track">
+                    <div
+                      class="filled"
+                      :style="{ width: vuePercentageWidth }"></div>
+                  </div>
+                </div>
+                <div class="result">
+                  <div class="label">React - {{ reactPercentageWidth }}</div>
+
+                  <div class="track">
+                    <div
+                      class="filled"
+                      :style="{ width: reactPercentageWidth }"></div>
+                  </div>
+                </div>
+                <div class="result">
+                  <div class="label">
+                    Angular - {{ angularPercentageWidth }}
+                  </div>
+
+                  <div class="track">
+                    <div
+                      class="filled"
+                      :style="{ width: angularPercentageWidth }"></div>
+                  </div>
+                </div>
+                <div class="result">
+                  <div class="label">Other - {{ otherPercentageWidth }}</div>
+                  <div class="track">
+                    <div
+                      class="filled"
+                      :style="{ width: otherPercentageWidth }"></div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </transition>
         </div>
+        <transition name="fade" mode="out-in">
+          <button v-if="hasVoted" @click="changeVote" class="my-1 change-vote">
+            CHANGE VOTE
+          </button>
+        </transition>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+  .modal-body {
+    height: 12.5rem;
+  }
+  .poll {
+    button {
+      border-radius: 20px;
+      width: 14rem;
+      border: 2px solid #736969;
+      padding: 0.45em;
+      background-color: #fff;
+      font-weight: bold;
+    }
+    .btn-green {
+      box-shadow: 0 0 8px 0 rgba(65, 184, 131, 1);
+      transition: 0.2s ease all;
+    }
+    .btn-green:hover {
+      box-shadow: 0 0 14px 0 rgba(65, 184, 131, 1);
+      transition: 0.2s ease all;
+    }
+    .btn-blue {
+      box-shadow: 0 0 8px 0 rgba(97, 218, 251, 1);
+      transition: 0.2s ease all;
+    }
+    .btn-blue:hover {
+      box-shadow: 0 0 14px 0 rgba(97, 218, 251, 1);
+      transition: 0.2s ease all;
+    }
+    .btn-red {
+      box-shadow: 0 0 8px 0 rgba(221, 0, 49, 1);
+      transition: 0.2s ease all;
+    }
+    .btn-red:hover {
+      box-shadow: 0 0 14px 0 rgba(221, 0, 49, 1);
+      transition: 0.2s ease all;
+    }
+    .btn-yellow {
+      box-shadow: 0 0 8px 0 rgb(221, 210, 0);
+      transition: 0.2s ease all;
+    }
+    .btn-yellow:hover {
+      box-shadow: 0 0 14px 0 rgb(221, 210, 0);
+      transition: 0.2s ease all;
+    }
+  }
+
+  .modal-content {
+    position: relative;
+    min-height: 375px;
+  }
+
+  .change-vote {
+    position: absolute;
+    bottom: 0.5em;
+    right: 1em;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(233, 191, 237);
+    color: #fff;
+    padding: 0.5em 1.5em;
+    font-weight: bold;
+    transition: 0.2s ease all;
+  }
+  .change-vote:hover {
+    background-color: rgb(212, 166, 216);
+    box-shadow: 0 0 8px 0 rgb(166, 144, 165);
+    transition: 0.2s ease all;
+  }
+
+  .track {
+    background-color: #e8e6e6;
+    height: 24px;
+    margin-bottom: 0.35em;
+    border-radius: 4px;
+  }
+  .filled {
+    background-color: hsla(329deg, 89%, 80%, 0.3);
+    height: 100%;
+    transition: 2.5s ease width;
+  }
+  .poll-answered {
+    transform: translateY(-1.5em);
+
+    .label {
+      margin-bottom: 0.15em;
+    }
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.2s;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  .fade-leave,
+  .fade-enter {
+    opacity: 1;
+  }
+</style>
