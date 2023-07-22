@@ -77,7 +77,7 @@
   position: fixed;
 }
 .toggle-opened:hover {
-  color: hsla(176, 91%, 82%, 0.8);
+  color: rgb(155, 225, 207);
 }
 
 .navbar-large {
@@ -87,10 +87,10 @@
 
   a {
     font-size: 1.2rem;
-    color: hsla(188, 55%, 68%, 1);
+    color: #48515b;
   }
   .nav-item:hover {
-    color: rgb(84, 228, 218);
+    color: rgb(155, 225, 207);
   }
 
   .border-animation-large {

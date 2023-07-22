@@ -16,7 +16,7 @@
 
 a {
   text-decoration: none;
-  color: rgb(20, 204, 189);
+  color: rgb(85, 155, 149);
   transition: 0.4s;
   padding: 0.5rem 0.8rem;
   font-weight: bold;
@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-  color: rgb(39, 170, 159);
+  color: rgb(155, 225, 207);
 }
 
 .night-mode-wrapper {
@@ -47,16 +47,20 @@ a:hover {
   }
   .credit {
     a:hover {
-      color: hsl(188deg, 55%, 68%);
+      color: rgb(155, 225, 207);
     }
   }
   .skills {
-    background-color: hsla(329, 89%, 80%, 0.7);
+    background-color: hsla(330, 95%, 83%, 0.9);
   }
   .poll {
     button {
-      background-color: rgb(222, 221, 232);
+      background-color: rgb(255, 255, 255);
+    }
+    .open-poll-modal {
       color: #262e36;
+      color: #453740;
+      border: 6px solid hsla(330, 95%, 83%, 0.9);
     }
   }
   .modal-content {

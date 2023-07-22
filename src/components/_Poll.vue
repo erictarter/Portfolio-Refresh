@@ -10,7 +10,7 @@
       type="button"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
-      class="w-100 text-center p-4 fs-5 fw-bold">
+      class="w-100 text-center p-4 fs-5 fw-bold open-poll-modal">
       What is your favorite framework?
     </button>
   </div>
