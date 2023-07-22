@@ -236,6 +236,13 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content p-4">
+        <button
+          type="button"
+          class="close-modal"
+          data-bs-dismiss="modal"
+          aria-label="Close">
+          <i class="lni lni-close"></i>
+        </button>
         <div
           class="modal-body d-flex align-items-center justify-content-center">
           <transition name="fade" mode="out-in">
@@ -408,6 +415,20 @@
     .label {
       margin-bottom: 0.15em;
     }
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    border: none;
+    background-color: #fff6f4;
+    transition: 0.2s ease all;
+  }
+
+  .close-modal:hover {
+    background-color: #ffeae6;
+    transition: 0.2s ease all;
   }
 
   .fade-enter-active,

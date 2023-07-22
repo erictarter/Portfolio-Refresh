@@ -59,6 +59,27 @@ a:hover {
       color: #262e36;
     }
   }
+  .modal-content {
+    background-color: #161718 !important;
+    border: 4px solid rgb(212, 166, 216);
+
+    .track {
+      background-color: rgb(71, 60, 72);
+    }
+    .filled {
+      background-color: rgb(212, 166, 216);
+    }
+  }
+  .close-modal {
+    background-color: transparent;
+    color: rgb(212, 166, 216);
+    transition: 0.2s ease all;
+  }
+  .close-modal:hover {
+    color: rgb(250, 197, 255);
+    background-color: transparent;
+    transition: 0.2s ease all;
+  }
 }
 
 .day-mode {
