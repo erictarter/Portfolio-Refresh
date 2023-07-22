@@ -12,7 +12,7 @@
   function getPercentageWidth(votes: number): string {
     const total = totalVotes.value || 1
     const percentage = (votes / total) * 100
-    return percentage.toFixed(2) + '%'
+    return percentage.toFixed(1) + '%'
   }
 
   const vuePercentageWidth = ref('0%')
@@ -258,7 +258,7 @@
                       Angular
                     </button>
                     <button @click="voteOther" class="my-1 mx-2 btn-yellow">
-                      Other
+                      Svelte
                     </button>
                   </div>
                 </div>
@@ -298,7 +298,7 @@
                   </div>
                 </div>
                 <div class="result">
-                  <div class="label">Other - {{ otherPercentageWidth }}</div>
+                  <div class="label">Svelte - {{ otherPercentageWidth }}</div>
                   <div class="track">
                     <div
                       class="filled"
@@ -323,6 +323,7 @@
   .modal-body {
     height: 12.5rem;
   }
+
   .poll {
     button {
       border-radius: 20px;
@@ -331,6 +332,7 @@
       padding: 0.45em;
       background-color: #fff;
       font-weight: bold;
+      color: #736969 !important;
     }
     .btn-green {
       box-shadow: 0 0 8px 0 rgba(65, 184, 131, 1);
@@ -357,11 +359,11 @@
       transition: 0.2s ease all;
     }
     .btn-yellow {
-      box-shadow: 0 0 8px 0 rgb(221, 210, 0);
+      box-shadow: 0 0 8px 0 #ff5722;
       transition: 0.2s ease all;
     }
     .btn-yellow:hover {
-      box-shadow: 0 0 14px 0 rgb(221, 210, 0);
+      box-shadow: 0 0 14px 0 rgb(221, 92, 0);
       transition: 0.2s ease all;
     }
   }
