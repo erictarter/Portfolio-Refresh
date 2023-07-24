@@ -26,7 +26,7 @@
 
   function getCounterData() {
     axios
-      .get('https://amplified-boggy-parrotfish.glitch.me/count/all')
+      .get('https://complete-olive-magnesium.glitch.me/count/all')
       .then((response: any) => {
         const data = response.data
         vueVotes.value = data.vueCounter
@@ -103,22 +103,22 @@
   function removeVote() {
     if (localStorage.getItem('voteType') === 'vue') {
       decrementVote(
-        'https://amplified-boggy-parrotfish.glitch.me/vuecounter/decrement',
+        'https://complete-olive-magnesium.glitch.me/vuecounter/decrement',
         'vue'
       )
     } else if (localStorage.getItem('voteType') === 'react') {
       decrementVote(
-        'https://amplified-boggy-parrotfish.glitch.me/reactcounter/decrement',
+        'https://complete-olive-magnesium.glitch.me/reactcounter/decrement',
         'react'
       )
     } else if (localStorage.getItem('voteType') === 'angular') {
       decrementVote(
-        'https://amplified-boggy-parrotfish.glitch.me/angularcounter/decrement',
+        'https://complete-olive-magnesium.glitch.me/angularcounter/decrement',
         'angular'
       )
     } else if (localStorage.getItem('voteType') === 'other') {
       decrementVote(
-        'https://amplified-boggy-parrotfish.glitch.me/othercounter/decrement',
+        'https://complete-olive-magnesium.glitch.me/othercounter/decrement',
         'other'
       )
     }
@@ -130,7 +130,7 @@
 
     checkLocalStorage()
     axios
-      .get('https://amplified-boggy-parrotfish.glitch.me/vuecounter/increment')
+      .get('https://complete-olive-magnesium.glitch.me/vuecounter/increment')
       .then((response: any) => {
         const counter = response.data.vueCounter
         vueVotes.value = counter
@@ -147,9 +147,7 @@
     localStorage.setItem('voteType', 'react')
     checkLocalStorage()
     axios
-      .get(
-        'https://amplified-boggy-parrotfish.glitch.me/reactcounter/increment'
-      )
+      .get('https://complete-olive-magnesium.glitch.me/reactcounter/increment')
       .then((response: any) => {
         const counter = response.data.reactCounter
         reactVotes.value = counter
@@ -167,7 +165,7 @@
     checkLocalStorage()
     axios
       .get(
-        'https://amplified-boggy-parrotfish.glitch.me/angularcounter/increment'
+        'https://complete-olive-magnesium.glitch.me/angularcounter/increment'
       )
       .then((response: any) => {
         const counter = response.data.angularCounter
@@ -185,9 +183,7 @@
     localStorage.setItem('voteType', 'other')
     checkLocalStorage()
     axios
-      .get(
-        'https://amplified-boggy-parrotfish.glitch.me/othercounter/increment'
-      )
+      .get('https://complete-olive-magnesium.glitch.me/othercounter/increment')
       .then((response: any) => {
         const counter = response.data.otherCounter
         otherVotes.value = counter
