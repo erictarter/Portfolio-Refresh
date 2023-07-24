@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref } from 'vue'
+  import { ref, computed, onMounted } from 'vue'
 
   const toggleState = ref(false)
   const emits = defineEmits(['toggle'])
@@ -7,7 +7,17 @@
   function darkModeToggle() {
     toggleState.value = !toggleState.value
     emits('toggle', toggleState.value)
+    localStorage.setItem('darkMode', toggleState.value.toString())
   }
+
+  onMounted(() => {
+    if (
+      localStorage.getItem('darkMode') &&
+      localStorage.getItem('darkMode') === 'true'
+    ) {
+      darkModeToggle()
+    }
+  })
 </script>
 
 <template>
