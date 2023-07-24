@@ -205,6 +205,12 @@
     checkLocalStorage()
     getCounterData()
     animateResults()
+    setTimeout(() => {
+      vuePercentageWidth.value = getPercentageWidth(vueVotes.value)
+      reactPercentageWidth.value = getPercentageWidth(reactVotes.value)
+      angularPercentageWidth.value = getPercentageWidth(angularVotes.value)
+      otherPercentageWidth.value = getPercentageWidth(otherVotes.value)
+    }, 250)
   })
 
   function animateResults() {
