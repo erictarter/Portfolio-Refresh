@@ -17,6 +17,13 @@
     toggleState.value = value
     emits('toggle', toggleState.value)
   }
+
+  function scrollToElement(elementId: string) {
+    const element = document.getElementById(elementId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 </script>
 
 <template>
@@ -30,7 +37,7 @@
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          href="#/$"
+          @click="scrollToElement('bio-section')"
           class="nav-item mx-2"
           >Bio</a
         >
@@ -40,7 +47,7 @@
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          href="#/*"
+          @click="scrollToElement('proj-section')"
           class="nav-item mx-2"
           >Projects</a
         >
@@ -49,8 +56,8 @@
       <div class="d-flex flex-column mx-2">
         <a
           @mouseenter="borderAnimation"
+          @click="scrollToElement('blog-section')"
           @mouseleave="animationLeave"
-          href="#/"
           class="nav-item mx-2"
           >Blog</a
         >
@@ -60,7 +67,7 @@
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          href="#/"
+          @click="scrollToElement('credit-section')"
           class="nav-item mx-2"
           >Socials</a
         >
@@ -82,5 +89,9 @@
     top: 0;
     transform: translateX(-10px) !important;
     border-radius: 50%;
+  }
+
+  a {
+    cursor: pointer;
   }
 </style>

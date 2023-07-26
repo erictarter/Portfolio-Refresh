@@ -26,6 +26,14 @@
   function closeNav() {
     toggleState.value = false
   }
+
+  function scrollToElement(elementId: string) {
+    navToggle()
+    const element = document.getElementById(elementId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 </script>
 
 <template>
@@ -59,10 +67,9 @@
         ">
         <div class="d-flex flex-column mx-2">
           <a
-            @click="navToggle"
+            @click="scrollToElement('bio-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
-            href="#/$"
             class="nav-item my-2"
             >Bio</a
           >
@@ -70,7 +77,7 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="navToggle"
+            @click="scrollToElement('proj-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             href="#/*"
@@ -81,7 +88,7 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="navToggle"
+            @click="scrollToElement('blog-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             href="#/"
@@ -92,7 +99,7 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="navToggle"
+            @click="scrollToElement('credit-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             href="#/"
