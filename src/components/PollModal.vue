@@ -26,7 +26,7 @@
 
   function getCounterData() {
     axios
-      .get('https://complete-olive-magnesium.glitch.me/count/all')
+      .get('https://node-express-counter.vercel.app/count/all')
       .then((response: any) => {
         const data = response.data
         vueVotes.value = data.vueCounter
@@ -103,22 +103,22 @@
   function removeVote() {
     if (localStorage.getItem('voteType') === 'vue') {
       decrementVote(
-        'https://complete-olive-magnesium.glitch.me/vuecounter/decrement',
+        'https://node-express-counter.vercel.app/vuecounter/decrement',
         'vue'
       )
     } else if (localStorage.getItem('voteType') === 'react') {
       decrementVote(
-        'https://complete-olive-magnesium.glitch.me/reactcounter/decrement',
+        'https://node-express-counter.vercel.app/reactcounter/decrement',
         'react'
       )
     } else if (localStorage.getItem('voteType') === 'angular') {
       decrementVote(
-        'https://complete-olive-magnesium.glitch.me/angularcounter/decrement',
+        'https://node-express-counter.vercel.app/angularcounter/decrement',
         'angular'
       )
     } else if (localStorage.getItem('voteType') === 'other') {
       decrementVote(
-        'https://complete-olive-magnesium.glitch.me/othercounter/decrement',
+        'https://node-express-counter.vercel.app/othercounter/decrement',
         'other'
       )
     }
@@ -130,7 +130,7 @@
 
     checkLocalStorage()
     axios
-      .get('https://complete-olive-magnesium.glitch.me/vuecounter/increment')
+      .get('https://node-express-counter.vercel.app/vuecounter/increment')
       .then((response: any) => {
         const counter = response.data.vueCounter
         vueVotes.value = counter
@@ -147,7 +147,7 @@
     localStorage.setItem('voteType', 'react')
     checkLocalStorage()
     axios
-      .get('https://complete-olive-magnesium.glitch.me/reactcounter/increment')
+      .get('https://node-express-counter.vercel.app/reactcounter/increment')
       .then((response: any) => {
         const counter = response.data.reactCounter
         reactVotes.value = counter
@@ -164,9 +164,7 @@
     localStorage.setItem('voteType', 'angular')
     checkLocalStorage()
     axios
-      .get(
-        'https://complete-olive-magnesium.glitch.me/angularcounter/increment'
-      )
+      .get('https://node-express-counter.vercel.app/angularcounter/increment')
       .then((response: any) => {
         const counter = response.data.angularCounter
         angularVotes.value = counter
@@ -183,7 +181,7 @@
     localStorage.setItem('voteType', 'other')
     checkLocalStorage()
     axios
-      .get('https://complete-olive-magnesium.glitch.me/othercounter/increment')
+      .get('https://node-express-counter.vercel.app/othercounter/increment')
       .then((response: any) => {
         const counter = response.data.otherCounter
         otherVotes.value = counter
