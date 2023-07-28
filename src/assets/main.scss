@@ -89,6 +89,20 @@ a:hover {
     background-color: transparent;
     transition: 0.2s ease all;
   }
+
+  .white-icon {
+    display: block;
+  }
+  .dark-icon {
+    display: none;
+  }
+}
+
+.white-icon {
+  display: none;
+}
+.dark-icon {
+  display: block;
 }
 
 .day-mode {
