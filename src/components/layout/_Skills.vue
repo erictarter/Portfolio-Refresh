@@ -15,7 +15,7 @@
       <v-icon class="mx-md-3 mx-2 skill-icon" name="co-css3" />
       <v-icon class="mx-md-3 mx-2 skill-icon" name="la-html5" />
       <v-icon class="mx-md-3 mx-2 skill-icon" name="co-javascript" />
-      <img
+      <!-- <img
         src="../../assets//images/icons8-typescript-50.png"
         width="34"
         height="34"
@@ -26,7 +26,7 @@
         width="34"
         height="34"
         alt=""
-        class="white-icon" />
+        class="white-icon" /> -->
     </div>
   </div>
 </template>
