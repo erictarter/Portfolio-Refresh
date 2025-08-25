@@ -38,11 +38,7 @@
 
 <template>
   <div class="d-flex flex-column d-md-none my-3">
-    <div class="d-flex justify-content-between align-items-center w-100 px-5">
-      <div class="brand">
-        <!-- <div class="avatar-image"></div> -->
-        <img src="../../../assets/logo.png" alt="" />
-      </div>
+    <div class="d-flex justify-content-between align-items-center w-100 px-3">
       <div>
         <i
           @click="navToggle"
@@ -51,6 +47,10 @@
               ? 'lni lni-menu menu-toggle toggle-closed'
               : 'lni lni-close menu-toggle toggle-opened'
           "></i>
+      </div>
+      <div class="brand">
+        <!-- <div class="avatar-image"></div> -->
+        <img src="../../../assets/et-logo.svg" alt="ET Logo" />
       </div>
     </div>
     <div
@@ -67,11 +67,11 @@
         ">
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('bio-section')"
+            @click="scrollToElement('skills-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             class="nav-item my-2"
-            >Bio</a
+            >Skills</a
           >
           <div class="border-animation mx-2"></div>
         </div>
@@ -88,23 +88,23 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('blog-section')"
+            @click="scrollToElement('poll-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             href="#/"
             class="nav-item my-2"
-            >Blog</a
+            >Community</a
           >
           <div class="border-animation mx-2"></div>
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('credit-section')"
+            @click="scrollToElement('footer-section')"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             href="#/"
             class="nav-item my-2"
-            >Socials</a
+            >Find Me</a
           >
           <div class="border-animation mx-2"></div>
         </div>

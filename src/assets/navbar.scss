@@ -17,11 +17,11 @@
 
   .nav-item {
     font-size: 1.4rem;
-    color: hsla(176, 91%, 82%, 0.8);
+    color: hsla(329, 40%, 85%, 0.8);
     width: 8rem;
   }
   .nav-item:hover {
-    color: hsla(176, 91%, 82%, 1);
+    color: hsla(329, 40%, 85%, 1);
   }
 
   .border-animation {
@@ -30,8 +30,8 @@
     // background-color: hsla(329, 91%, 85%, 1);
     background: linear-gradient(
       to right,
-      hsla(329, 89%, 72%, 1),
-      hsla(171, 87%, 69%, 1)
+      hsla(329, 50%, 85%, 1),
+      hsla(329, 40%, 85%, 1)
     );
     transition: 0.2s ease all;
     border-radius: 2px;
@@ -43,8 +43,8 @@
     // background-color: hsla(329, 91%, 85%, 1);
     background: linear-gradient(
       to right,
-      hsla(329, 89%, 72%, 1),
-      hsla(171, 87%, 69%, 1)
+      hsla(329, 50%, 85%, 1),
+      hsla(329, 40%, 85%, 1)
     );
     transition: 0.2s ease all;
   }
@@ -75,9 +75,12 @@
 .toggle-opened {
   transition: 0.3s ease all;
   position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 103;
 }
 .toggle-opened:hover {
-  color: rgb(155, 225, 207);
+  color: hsla(329, 40%, 85%, 1);
 }
 
 .navbar-large {
@@ -90,13 +93,13 @@
     color: #48515b;
   }
   .nav-item:hover {
-    color: rgb(155, 225, 207);
+    color: hsla(329, 40%, 85%, 1);
   }
 
   .border-animation-large {
     width: 0%;
     height: 4px;
-    background: hsla(329, 89%, 80%, 1);
+    background: hsla(329, 40%, 85%, 1);
     transition: 0.3s ease all;
     border-radius: 2px;
     transform: translate(20%, -0.6rem);
@@ -104,7 +107,7 @@
   .border-animation-large-active {
     width: 80%;
     height: 4px;
-    background: hsla(329, 89%, 80%, 1);
+    background: hsla(329, 40%, 85%, 1);
     transition: 0.3s ease all;
   }
 }

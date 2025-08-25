@@ -7,7 +7,7 @@
 <template>
   <div
     id="footer-section"
-    class="footer d-flex justify-content-between align-items-center py-3 px-3 px-sm-5">
+    class="footer d-flex justify-content-between align-items-center py-3 px-3">
     <div>
       <p class="fs-5 text-center">© Eric Tarter</p>
     </div>

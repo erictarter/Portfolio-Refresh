@@ -36,7 +36,7 @@
     cursor: pointer;
   }
   .switch {
-    border: 2px solid hsla(329, 89%, 80%, 0.9);
+    border: 2px solid hsla(329, 40%, 85%, 0.9);
     width: 4.5rem;
     height: 70%;
     border-radius: 20px;

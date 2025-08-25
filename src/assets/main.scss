@@ -29,35 +29,45 @@ a {
 }
 
 a:hover {
-  color: rgb(155, 225, 207);
+  color: hsla(329, 40%, 85%, 1);
 }
 
 .night-mode-wrapper {
-  h1,
-  h2,
-  p {
-    color: #fff;
+  /* Global text color overrides using CSS variables */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
   }
 
+  p {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted) !important;
+  }
+
+  /* Specific overrides for components */
   .brand {
     img {
-      border: 2px solid hsla(329, 89%, 80%, 0.9);
+      border: none;
       border-radius: 50%;
     }
   }
 
-  a,
-  div {
-    color: #fff;
+  a, div {
+    color: var(--text-primary);
   }
+
   .credit {
     a:hover {
-      color: rgb(155, 225, 207);
+      color: hsla(329, 40%, 85%, 1);
     }
   }
+
   .skills {
     background-color: hsla(330, 95%, 83%, 0.9);
   }
+
   .poll {
     button {
       background-color: rgb(255, 255, 255);
@@ -65,9 +75,9 @@ a:hover {
     .open-poll-modal {
       color: #262e36;
       color: #453740;
-      border: 6px solid hsla(330, 95%, 83%, 0.9);
     }
   }
+
   .modal-content {
     background-color: #161718 !important;
     border: 4px solid rgb(212, 166, 216);
@@ -79,11 +89,13 @@ a:hover {
       background-color: rgb(212, 166, 216);
     }
   }
+
   .close-modal {
     background-color: transparent;
     color: rgb(212, 166, 216);
     transition: 0.2s ease all;
   }
+
   .close-modal:hover {
     color: rgb(250, 197, 255);
     background-color: transparent;
@@ -95,6 +107,11 @@ a:hover {
   }
   .dark-icon {
     display: none;
+  }
+
+  /* Ensure Eric Tarter name always stays dark grey */
+  .bio-personal h1 {
+    color: #495057 !important;
   }
 }
 

@@ -7,15 +7,23 @@
 <template>
   <div
     id="blog-section"
-    class="blog-section d-flex justify-content-around justify-content-lg-center align-items-center my-3 p-3">
-    <div class="w-50">
-      <h2 class="">Check Out My Blog Post</h2>
-    </div>
+    class="blog-section mt-5 pt-5 d-flex flex-column justify-content-center align-items-center my-3 px-3">
+    <h2 class="mb-4 w-100 text-muted" style="text-align: left;">Blog</h2>
     <a
       target="_blank"
       href="https://timely-semolina-84be97.netlify.app/"
-      class="blog-link"></a>
+      class="blog-link p-0 w-100 d-flex justify-content-center align-items-center">
+      Blog Post
+    </a>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  h2 {
+    color: var(--text-muted);
+  }
+
+  .blog-overlay-text {
+    color: var(--text-primary);
+  }
+</style>

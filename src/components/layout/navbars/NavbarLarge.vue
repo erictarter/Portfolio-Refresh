@@ -27,54 +27,54 @@
 </script>
 
 <template>
-  <div class="navbar-large d-none d-md-flex align-items-center px-5 mt-5">
-    <div class="brand w-75">
+  <div class="navbar-large d-none d-md-flex align-items-center justify-content-between px-3 mt-4">
+    <div class="brand">
       <!-- <div class="avatar-image-large"></div> -->
-      <img src="../../../assets/logo.png" alt="" />
+      <img src="../../../assets/et-logo.svg" alt="ET Logo" />
     </div>
-    <div class="nav-items d-flex justify-content-between">
-      <div class="d-flex flex-column mx-2">
+    <div class="nav-items d-flex align-items-center justify-content-end flex-wrap">
+      <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          @click="scrollToElement('bio-section')"
-          class="nav-item mx-2"
-          >Bio</a
+          @click="scrollToElement('skills-section')"
+          class="nav-item mx-1"
+          >Skills</a
         >
         <div class="border-animation-large"></div>
       </div>
-      <div class="d-flex flex-column mx-2">
+      <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
           @click="scrollToElement('proj-section')"
-          class="nav-item mx-2"
+          class="nav-item mx-1"
           >Projects</a
         >
         <div class="border-animation-large"></div>
       </div>
-      <div class="d-flex flex-column mx-2">
+      <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
-          @click="scrollToElement('blog-section')"
           @mouseleave="animationLeave"
-          class="nav-item mx-2"
-          >Blog</a
+          @click="scrollToElement('poll-section')"
+          class="nav-item mx-1"
+          >Community</a
         >
         <div class="border-animation-large"></div>
       </div>
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          @click="scrollToElement('credit-section')"
-          class="nav-item mx-2"
-          >Socials</a
+          @click="scrollToElement('footer-section')"
+          class="nav-item mx-1"
+          >Find Me</a
         >
         <div class="border-animation-large"></div>
       </div>
       <DarkModeToggler
-        class="d-flex align-items-center nav-item mx-2"
+        class="d-flex align-items-center nav-item mx-1"
         @toggle="handleToggle" />
     </div>
   </div>

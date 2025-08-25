@@ -4,7 +4,6 @@
   import Projects from './components/layout/_Projects.vue'
   import Poll from './components/_Poll.vue'
   import Skills from './components/layout/_Skills.vue'
-  import Blog from './components/layout/_Blog.vue'
   import Credit from './components/_Credit.vue'
   import Footer from './components/layout/_Footer.vue'
   import PollModal from './components/PollModal.vue'
@@ -22,10 +21,9 @@
   <div :class="toggleState ? 'night-mode-wrapper' : ''">
     <Header @toggle="handleToggle" />
     <Bio />
+    <Skills :darkMode="toggleState" />
     <Projects />
     <Poll />
-    <Skills :darkMode="toggleState" />
-    <Blog />
     <Credit />
     <Footer />
     <PollModal />

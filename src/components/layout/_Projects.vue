@@ -14,8 +14,8 @@
 </script>
 
 <template>
-  <div class="projects-section px-5" id="proj-section">
-    <h2 class="mb-4">Projects</h2>
+  <div class="projects-section px-3 mt-5 pt-5" id="proj-section">
+    <h2 class="mb-4 text-muted" style="text-align: left;">Projects</h2>
     <div class="projects">
       <a
         @mouseenter="showOverlay"
@@ -78,4 +78,30 @@
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+  .projects-section {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem;
+    /* Light mode gradient background */
+    background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.6) 100%);
+  }
+
+  h2 {
+    color: var(--text-muted);
+  }
+
+  /* Legacy section-bg styles (can be removed if not used elsewhere) */
+  .section-bg {
+    margin-bottom: 2rem;
+    position: relative;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem;
+    background: var(--bg-secondary);
+  }
+
+  :global(.night-mode-wrapper) .section-bg {
+    background: var(--bg-primary);
+  }
+</style>
