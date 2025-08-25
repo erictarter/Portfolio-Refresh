@@ -68,7 +68,7 @@
         class="project">
         <div class="project-overlay d-none d-md-flex"></div>
         <p class="fs-5 project-description-lg d-none px-3 d-md-flex">
-          Play around on this Tone JS Piano App
+          Tone JS Piano App
         </p>
         <p class="project-description-mobile d-flex d-md-none p-2">
           Tone JS Piano App
