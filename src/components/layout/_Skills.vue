@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="skills-section mx-3" id="skills-section">
+  <div class="skills-section mx-3 mt-5" id="skills-section">
     <h2 class="mb-4 text-muted">My Skills</h2>
     
     <!-- Frontend Technologies -->
@@ -205,5 +205,9 @@
 
   .night-mode-wrapper .skill-icon-small {
     color: #495057 !important;
+  }
+
+  .skills-section {
+    margin-top: 5rem !important;
   }
 </style>
