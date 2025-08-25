@@ -85,7 +85,6 @@
     padding-top: 2rem !important;
     padding-bottom: 2rem;
     /* Light mode gradient background */
-    background: linear-gradient(135deg, rgba(248, 249, 250, 0.8) 0%, rgba(233, 236, 239, 0.6) 100%);
   }
 
   h2 {
