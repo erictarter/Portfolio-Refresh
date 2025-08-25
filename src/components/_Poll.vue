@@ -14,7 +14,7 @@
       href="https://timely-semolina-84be97.netlify.app/"
       class="community-link w-100 d-flex justify-content-center align-items-center mb-4">
       <span class="community-text">
-        <i class="lni lni-blogger me-2"></i> Blog Post
+        <i class="lni lni-blogger me-2"></i> Blog
       </span>
     </a>
 
@@ -42,12 +42,12 @@
   .community-link {
     height: 8rem;
     border-radius: 8px;
-    background: linear-gradient(135deg, rgb(241 228 237 / 90%) 0%, rgba(255, 255, 255, 0.6) 100%);
+    background: linear-gradient(135deg, rgb(241 228 237 / 90%) 0%, rgba(255, 255, 255, 0.6) 100%) !important;
     transition: 0.2s ease all;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     position: relative;
     text-decoration: none;
-    border: none;
+    border: none !important;
     cursor: pointer;
   }
 
@@ -59,7 +59,7 @@
     padding: 1rem 2rem;
     border-radius: 6px;
     letter-spacing: 1px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: none !important;
     backdrop-filter: blur(4px);
   }
 
@@ -77,12 +77,8 @@
     background: #333;
   }
 
-  .night-mode-wrapper .community-link {
-    background: linear-gradient(135deg, rgb(241 228 237 / 90%) 0%, rgb(42 42 42 / 60%) 90%) !important;
-  }
-
   .night-mode-wrapper .community-text {
-    color: #f8f9fa !important;
+    color: #495057 !important;
     background: transparent;
     border: none;
   }

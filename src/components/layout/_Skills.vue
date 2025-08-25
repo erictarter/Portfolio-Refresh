@@ -79,6 +79,18 @@
             <span class="skill-label">Google Tag Manager</span>
           </div>
         </div>
+        <div class="col-6 col-md-4">
+          <div class="skill-item-text">
+            <i class="lni lni-search skill-icon-small me-2"></i>
+            <span class="skill-label">SEO</span>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="skill-item-text">
+            <i class="lni lni-bolt-alt skill-icon-small me-2"></i>
+            <span class="skill-label">Web Performance</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -185,15 +197,6 @@
 </style>
 
 <style>
-  /* Dark mode gradients for skill items - unscoped for proper targeting */
-  .night-mode-wrapper .skill-item-text {
-    background: linear-gradient(135deg, rgb(241 228 237 / 90%) 0%, rgb(42 42 42 / 60%) 90%) !important;
-  }
-
-  .night-mode-wrapper .skill-item-text:hover {
-    background: linear-gradient(135deg, rgb(241 228 237 / 90%) 0%, rgb(42 42 42 / 60%) 90%) !important;
-    opacity: 0.9;
-  }
 
   /* Keep Other Expertise text and icons dark in both modes */
   .night-mode-wrapper .skill-item-text .skill-label {

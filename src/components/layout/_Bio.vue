@@ -75,10 +75,7 @@
 </style>
 
 <style>
-  /* Dark mode styling - unscoped to ensure proper targeting */
-  .night-mode-wrapper .bio-hero-wrapper {
-    background: linear-gradient(135deg, rgb(241 228 237 / 90%) 0%, rgb(42 42 42 / 60%) 90%) !important;
-  }
+
 
   .night-mode-wrapper .bio-personal p {
     color: #495057;
