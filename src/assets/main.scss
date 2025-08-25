@@ -19,6 +19,17 @@ body {
   font-weight: normal;
 }
 
+@media (min-width: 880px) {
+  #app {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .bio-personal {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
 a {
   text-decoration: none;
   color: rgb(85, 155, 149);
