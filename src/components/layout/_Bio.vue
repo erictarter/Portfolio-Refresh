@@ -10,8 +10,8 @@
       class="bio d-flex flex-column justify-content-center px-3 mt-4 bio-hero"
       id="bio-section">
       <div class="bio-personal">
-        <h1 class="text-muted">Eric Tarter</h1>
-        <p class="fs-5">
+        <h1 class="text-muted mb-0">Eric Tarter</h1>
+        <p class="fs-5 mb-0">
           Front-End Developer Living in the Pacific Northwest
           <svg width="32" height="32" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" style="vertical-align:baseline; display:inline-block; transform: translate(-4px,2px);">
             <defs>
