@@ -9,12 +9,6 @@
     id="credit-section"
     class="d-flex credit flex-column w-100 justify-content-center align-items-center align-items-sm-end mt-5 px-3">
     <div>
-      Logo design by
-      <a class="p-0 ms-1" target="_blank" href="https://www.designevo.com/">
-        designevo</a
-      >
-    </div>
-    <div>
       Photos from
       <a class="p-0 ms-1" target="_blank" href="https://unsplash.com/">
         unsplash</a
