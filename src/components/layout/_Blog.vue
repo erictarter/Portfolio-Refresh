@@ -11,8 +11,10 @@
     <h2 class="mb-4 w-100 text-muted" style="text-align: left;">Blog</h2>
     <a
       target="_blank"
+      rel="noopener noreferrer"
       href="https://timely-semolina-84be97.netlify.app/"
-      class="blog-link p-0 w-100 d-flex justify-content-center align-items-center">
+      class="blog-link p-0 w-100 d-flex justify-content-center align-items-center"
+      aria-label="Read my blog post on Netlify">
       Blog
     </a>
   </div>

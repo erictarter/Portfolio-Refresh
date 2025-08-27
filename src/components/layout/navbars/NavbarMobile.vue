@@ -50,7 +50,7 @@
       </div>
       <div class="brand">
         <!-- <div class="avatar-image"></div> -->
-        <img src="../../../assets/et-logo.svg" alt="ET Logo" />
+    <img src="../../../assets/et-logo.svg" alt="Eric Tarter logo, stylized ET with tree and moon" width="75" height="75" loading="lazy" />
       </div>
     </div>
     <div
@@ -67,7 +67,7 @@
         ">
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('skills-section')"
+            href="#skills-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
             class="nav-item my-2"
@@ -77,10 +77,9 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('proj-section')"
+            href="#proj-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
-            href="#/*"
             class="nav-item my-2"
             >Projects</a
           >
@@ -88,10 +87,9 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('poll-section')"
+            href="#poll-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
-            href="#/"
             class="nav-item my-2"
             >Community</a
           >
@@ -99,10 +97,9 @@
         </div>
         <div class="d-flex flex-column mx-2">
           <a
-            @click="scrollToElement('footer-section')"
+            href="#footer-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
-            href="#/"
             class="nav-item my-2"
             >Find Me</a
           >

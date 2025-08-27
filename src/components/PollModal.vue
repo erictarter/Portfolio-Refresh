@@ -240,8 +240,8 @@
           type="button"
           class="close-modal"
           data-bs-dismiss="modal"
-          aria-label="Close">
-          <i class="lni lni-close"></i>
+          aria-label="Close poll modal">
+          <i class="lni lni-close" aria-hidden="true"></i>
         </button>
         <div
           class="modal-body d-flex align-items-center justify-content-center">

@@ -11,10 +11,11 @@
     <!-- Blog Link -->
     <a
       target="_blank"
+      rel="noopener noreferrer"
       href="https://timely-semolina-84be97.netlify.app/"
       class="community-link w-100 d-flex justify-content-center align-items-center mb-4">
       <span class="community-text">
-        <i class="lni lni-blogger me-2"></i> Blog
+        <i class="lni lni-blogger me-2" aria-label="Blog"></i> Blog
       </span>
     </a>
 

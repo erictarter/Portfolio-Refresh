@@ -29,15 +29,15 @@
 <template>
   <div class="navbar-large d-none d-md-flex align-items-center justify-content-between px-3 mt-4">
     <div class="brand">
-      <!-- <div class="avatar-image-large"></div> -->
-      <img src="../../../assets/et-logo.svg" alt="ET Logo" />
+  <!-- <div class="avatar-image-large" aria-hidden="true"></div> -->
+  <img src="../../../assets/et-logo.svg" alt="Eric Tarter logo, stylized ET with tree and moon" width="100" height="100" loading="lazy" />
     </div>
     <div class="nav-items d-flex align-items-center justify-content-end flex-wrap">
       <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          @click="scrollToElement('skills-section')"
+          href="#skills-section"
           class="nav-item mx-1"
           >Skills</a
         >
@@ -47,7 +47,7 @@
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          @click="scrollToElement('proj-section')"
+          href="#proj-section"
           class="nav-item mx-1"
           >Projects</a
         >
@@ -57,7 +57,7 @@
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          @click="scrollToElement('poll-section')"
+          href="#poll-section"
           class="nav-item mx-1"
           >Community</a
         >
@@ -67,7 +67,7 @@
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
-          @click="scrollToElement('footer-section')"
+          href="#footer-section"
           class="nav-item mx-1"
           >Find Me</a
         >
