@@ -1,0 +1,29 @@
+<svg width="48" height="48" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#3a2566;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#120c24;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#495057;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6c757d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="treeGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d5a3d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7c59;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="30" cy="30" r="28" fill="url(#skyGradient)" stroke="rgba(214,199,208,0.4)" stroke-width="1"/>
+  <circle cx="30" cy="15" r="3.5" fill="rgba(255,255,255,0.9)" opacity="0.8"/>
+  <circle cx="31" cy="13.5" r="3" fill="url(#skyGradient)" opacity="0.4"/>
+  <polygon points="30,45 26,52 34,52" fill="url(#treeGradient)" opacity="0.7"/>
+  <polygon points="30,48 27,54 33,54" fill="url(#treeGradient)" opacity="0.6"/>
+  <path d="M 24 44 Q 30 38 36 44" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.95"/>
+  <g transform="translate(30,30)">
+    <path d="M -5,-3.5 L -5,3.5 M -5,-3.5 L -1,-3.5 M -5,0 L -2,0 M -5,3.5 L -1,3.5" 
+      stroke="#d6d6e0" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+    <path d="M 2,-3.5 L 6,-3.5 M 4,-3.5 L 4,3.5" 
+      stroke="#d6d6e0" stroke-width="1.7" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

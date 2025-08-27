@@ -20,6 +20,12 @@
         </div>
         <div class="col-6 col-md-4 col-lg-2">
           <div class="skill-item">
+            <v-icon class="skill-icon mb-2" name="si-nuxtdotjs" />
+            <div class="skill-label">Nuxt</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="skill-item">
             <v-icon class="skill-icon mb-2" name="co-react" />
             <div class="skill-label">React</div>
           </div>
@@ -40,6 +46,12 @@
           <div class="skill-item">
             <v-icon class="skill-icon mb-2" name="co-css3" />
             <div class="skill-label">CSS3</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="skill-item">
+            <v-icon class="skill-icon mb-2" name="si-tailwindcss" />
+            <div class="skill-label">Tailwind</div>
           </div>
         </div>
         <div class="col-6 col-md-4 col-lg-2">

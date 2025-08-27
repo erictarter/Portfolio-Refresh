@@ -21,14 +21,14 @@
         @mouseenter="showOverlay"
         @mouseleave="hideOverlay"
         target="_blank"
-        href="https://mystifying-mahavira-4e8faa.netlify.app/"
+        href="https://enchanting-strudel-524249.netlify.app/"
         class="project">
         <div class="project-overlay d-none d-md-flex"></div>
         <p class="fs-5 project-description-lg d-none px-3 d-md-flex">
-          Online Sunglasses Store with shopping cart
+          Outdoor Furniture Shop
         </p>
         <p class="project-description-mobile d-flex d-md-none p-2">
-          Online Store W/shopping cart
+          Ecommerce experience built with Nuxt
         </p>
       </a>
       <a
@@ -42,7 +42,7 @@
           Find Out how much house you can afford in this questionaire
         </p>
         <p class="project-description-mobile d-flex d-md-none p-2">
-          Home Budget
+          Mortgage Questionaire
         </p>
       </a>
       <a

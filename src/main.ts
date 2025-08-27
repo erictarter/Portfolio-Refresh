@@ -6,10 +6,12 @@ import VueSmoothScroll from 'vue3-smooth-scroll'
 import App from './App.vue'
 import './assets/main.scss'
 
+
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import { IoLogoVue, CoReact, CoSassAlt, CoCss3, LaHtml5, CoJavascript } from "oh-vue-icons/icons";
+import { SiNuxtdotjs, SiTailwindcss } from "oh-vue-icons/icons/si";
 
-addIcons(IoLogoVue, CoReact, CoSassAlt, CoCss3, LaHtml5, CoJavascript);
+addIcons(IoLogoVue, CoReact, CoSassAlt, CoCss3, LaHtml5, CoJavascript, SiNuxtdotjs, SiTailwindcss);
 
 const app = createApp(App)
 
