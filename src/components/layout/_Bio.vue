@@ -11,7 +11,7 @@
       id="bio-section">
       <div class="bio-personal">
         <h1 class="text-muted">Eric Tarter</h1>
-        <p class="fs-5">
+        <p class="fs-4" style="line-height: normal;">
           Front-End Developer Living in the Pacific Northwest
           <svg width="32" height="32" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" style="vertical-align:baseline; display:inline-block; transform: translate(-4px,2px);">
             <defs>
