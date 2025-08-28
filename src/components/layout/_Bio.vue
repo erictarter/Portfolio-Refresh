@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="bio-hero-wrapper">
+  <div class="bio-hero-wrapper py-3 mt-4">
     <div
       class="bio d-flex flex-column justify-content-center px-3 mt-4 bio-hero"
       id="bio-section">
