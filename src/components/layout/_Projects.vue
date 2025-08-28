@@ -28,7 +28,7 @@
           Outdoor Furniture Shop
         </p>
         <p class="project-description-mobile d-flex d-md-none p-2">
-          Ecommerce experience built with Nuxt
+          Ecommerce Experience :Nuxt
         </p>
       </a>
       <a
