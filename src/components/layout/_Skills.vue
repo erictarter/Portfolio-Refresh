@@ -6,11 +6,11 @@
 
 <template>
   <div class="skills-section mx-3 mt-5" id="skills-section">
-    <h2 class="mb-4 text-muted">My Skills</h2>
+    <h2 class="mb-4 text-muted">Skills</h2>
     
     <!-- Frontend Technologies -->
     <div class="mt-4">
-      <h5 class="mb-3 text-muted">Frontend Technologies</h5>
+      <h3 class="mb-3 text-muted">Frontend Technologies</h3>
       <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-2">
           <div class="skill-item">
@@ -65,7 +65,7 @@
 
     <!-- Other Expertise -->
     <div class="mt-5">
-      <h5 class="mb-3 text-muted">Other Expertise</h5>
+      <h3 class="mb-3 text-muted">Other Expertise</h3>
       <div class="row g-3">
         <div class="col-6 col-md-4">
           <div class="skill-item-text">
@@ -154,7 +154,7 @@
     color: #495057;
   }
 
-  h5.text-muted {
+  h3.text-muted {
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -169,7 +169,7 @@
   }
 
   @media (max-width: 576px) {
-    h5.text-muted {
+    h3.text-muted {
       text-align: left;
       margin-left: 0;
       padding-left: 0;

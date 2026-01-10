@@ -49,21 +49,6 @@
         @mouseenter="showOverlay"
         @mouseleave="hideOverlay"
         target="_blank"
-        href="https://tender-feynman-0a5def.netlify.app/"
-        class="project"
-        id="/#">
-        <div class="project-overlay d-none d-md-flex"></div>
-        <p class="fs-5 project-description-lg px-3 d-none d-md-flex">
-          Get up to date covid data from the Covid Tracking Data API
-        </p>
-        <p class="project-description-mobile d-flex d-md-none p-2">
-          Covid Data
-        </p>
-      </a>
-      <a
-        @mouseenter="showOverlay"
-        @mouseleave="hideOverlay"
-        target="_blank"
         href="https://affectionate-booth-7c6f42.netlify.app/"
         class="project">
         <div class="project-overlay d-none d-md-flex"></div>

@@ -26,18 +26,10 @@
   function closeNav() {
     toggleState.value = false
   }
-
-  function scrollToElement(elementId: string) {
-    navToggle()
-    const element = document.getElementById(elementId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 </script>
 
 <template>
-  <div class="d-flex flex-column d-md-none my-3">
+  <div class="d-flex flex-column d-md-none my-2">
     <div class="d-flex justify-content-between align-items-center w-100 px-3">
       <div>
         <i
@@ -48,7 +40,7 @@
               : 'lni lni-close menu-toggle toggle-opened'
           "></i>
       </div>
-      <div class="brand">
+      <div class="brand small-brand">
         <!-- <div class="avatar-image"></div> -->
     <img src="../../../assets/et-logo.svg" alt="Eric Tarter logo, stylized ET with tree and moon" width="75" height="75" loading="lazy" />
       </div>
@@ -70,6 +62,7 @@
             href="#skills-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
+            @click="navToggle"
             class="nav-item my-2"
             >Skills</a
           >
@@ -80,6 +73,7 @@
             href="#proj-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
+            @click="navToggle"
             class="nav-item my-2"
             >Projects</a
           >
@@ -90,6 +84,7 @@
             href="#poll-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
+            @click="navToggle"
             class="nav-item my-2"
             >Community</a
           >
@@ -100,6 +95,7 @@
             href="#footer-section"
             @mouseenter="borderAnimation"
             @mouseleave="animationLeave"
+            @click="navToggle"
             class="nav-item my-2"
             >Find Me</a
           >
@@ -118,12 +114,11 @@
 
 <style scoped>
   img {
-    width: 75px;
-    height: 75px;
+    width: 55px;
+    height: 55px;
     opacity: 1;
     /* position: absolute; */
     top: 0;
-    transform: translateX(-10px);
     border-radius: 50%;
   }
 </style>

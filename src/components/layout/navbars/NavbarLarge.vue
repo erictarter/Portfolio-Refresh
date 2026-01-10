@@ -27,8 +27,8 @@
 </script>
 
 <template>
-  <div class="navbar-large d-none d-md-flex align-items-center justify-content-between px-3 mt-4">
-    <div class="brand">
+  <div class="navbar-large d-none d-md-flex align-items-center justify-content-between px-3 mt-3 mb-3">
+    <div class="brand large-brand">
   <!-- <div class="avatar-image-large" aria-hidden="true"></div> -->
   <img src="../../../assets/et-logo.svg" alt="Eric Tarter logo, stylized ET with tree and moon" width="100" height="100" loading="lazy" />
     </div>
@@ -82,12 +82,11 @@
 
 <style scoped>
   img {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     opacity: 1;
     /* position: absolute; */
     top: 0;
-    transform: translateX(-10px) !important;
     border-radius: 50%;
   }
 
