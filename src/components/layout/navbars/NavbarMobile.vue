@@ -29,7 +29,7 @@
 </script>
 
 <template>
-  <div class="d-flex flex-column d-md-none my-2">
+  <header class="d-flex flex-column d-md-none my-2">
     <div class="d-flex justify-content-between align-items-center w-100 px-3">
       <div>
         <i
@@ -57,6 +57,17 @@
             ? 'nav-items-show d-flex flex-column justify-content-start'
             : 'nav-items-hide'
         ">
+        <div class="d-flex flex-column mx-2">
+          <a
+            href="#bio-section"
+            @mouseenter="borderAnimation"
+            @mouseleave="animationLeave"
+            @click="navToggle"
+            class="nav-item my-2"
+            >About</a
+          >
+          <div class="border-animation mx-2"></div>
+        </div>
         <div class="d-flex flex-column mx-2">
           <a
             href="#skills-section"
@@ -109,7 +120,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <style scoped>

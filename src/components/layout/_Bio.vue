@@ -1,8 +1,44 @@
 <script lang="ts">
-  import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
 
-  export default defineComponent({})
+export default defineComponent({
+  setup() {
+    const startDate = new Date('2022-08-16')
+
+    const experienceYears = computed(() => {
+      const now = new Date()
+
+      // Total years difference
+      let years = now.getFullYear() - startDate.getFullYear()
+
+      // Anniversary this year
+      const anniversary = new Date(now.getFullYear(), startDate.getMonth(), startDate.getDate())
+
+      // If the anniversary hasn't happened yet this year, subtract 1 from years
+      if (now < anniversary) {
+        years--
+      }
+
+      // Calculate months difference from last anniversary
+      let lastAnniversary = new Date(now.getFullYear(), startDate.getMonth(), startDate.getDate())
+      if (now < lastAnniversary) {
+        lastAnniversary.setFullYear(now.getFullYear() - 1)
+      }
+
+      const monthsSinceAnniversary = (now.getFullYear() - lastAnniversary.getFullYear()) * 12 + (now.getMonth() - lastAnniversary.getMonth())
+
+      // Show "over" if more than 3 months past the anniversary
+      const prefix = monthsSinceAnniversary >= 3 ? 'over ' : ''
+
+      return `${prefix}${years} year${years > 1 ? 's' : ''}`
+    })
+
+    return { experienceYears }
+  }
+})
 </script>
+
+
 
 <template>
   <div class="bio-hero-wrapper py-3 mt-2">
@@ -24,6 +60,20 @@
             <polygon points="22,31 16,43 28,43" fill="url(#bioTreeGradient)" opacity="0.6"/>
           </svg>
         </p>
+        <div class="mt-4">
+          <p>
+            I’m a front-end developer with {{ experienceYears }} of experience at a mid-size company. I’ve worked on a variety of projects, including customer-facing web applications, our e-commerce platform, marketing pages, and an internal CRM tool. My primary experience is with <strong>Vue.js</strong> and <strong>CSHTML</strong>, with additional work in <strong>React</strong>.
+          </p>
+
+
+          <p>
+            Beyond building user interfaces, I have hands-on experience with tracking and measurement using <strong>Google Tag Manager</strong> and <strong>GA4</strong>, ensuring web applications provide actionable insights. I’m also knowledgeable in <strong>performance optimization</strong> and <strong>accessibility best practices</strong>, creating fast, efficient, and inclusive user experiences.
+          </p>
+
+          <p>
+            I enjoy collaborating across teams to bring ideas from concept to implementation, balancing technical requirements with user-focused design.
+          </p>
+        </div>
       </div>
     </div>
   </div>

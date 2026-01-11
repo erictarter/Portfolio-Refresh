@@ -27,12 +27,22 @@
 </script>
 
 <template>
-  <div class="navbar-large d-none d-md-flex align-items-center justify-content-between px-3 mt-3 mb-3">
+  <header class="navbar-large d-none d-md-flex align-items-center justify-content-between px-3 mt-3 mb-3">
     <div class="brand large-brand">
   <!-- <div class="avatar-image-large" aria-hidden="true"></div> -->
   <img src="../../../assets/et-logo.svg" alt="Eric Tarter logo, stylized ET with tree and moon" width="100" height="100" loading="lazy" />
     </div>
     <div class="nav-items d-flex align-items-center justify-content-end flex-wrap">
+      <div class="d-flex flex-column mx-1">
+        <a
+          @mouseenter="borderAnimation"
+          @mouseleave="animationLeave"
+          href="#bio-section"
+          class="nav-item mx-1"
+          >About</a
+        >
+        <div class="border-animation-large"></div>
+      </div>
       <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
@@ -77,7 +87,7 @@
         class="d-flex align-items-center nav-item mx-1"
         @toggle="handleToggle" />
     </div>
-  </div>
+  </header>
 </template>
 
 <style scoped>

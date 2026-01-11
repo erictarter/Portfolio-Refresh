@@ -19,7 +19,7 @@
 
 <style scoped>
   a {
-    color: hsla(329, 89%, 80%, 0.9);
+    color: hsla(329, 15%, 28%, 0.9);
     text-decoration: underline;
   }
 </style>

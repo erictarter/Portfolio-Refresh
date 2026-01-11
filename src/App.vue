@@ -20,11 +20,13 @@
 <template>
   <div :class="toggleState ? 'night-mode-wrapper' : ''">
     <Header @toggle="handleToggle" />
+    <main>
     <Bio />
     <Skills :darkMode="toggleState" />
     <Projects />
     <Poll />
     <Credit />
+    </main>
     <Footer />
     <PollModal />
   </div>

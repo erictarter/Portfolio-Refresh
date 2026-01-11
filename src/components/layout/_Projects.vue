@@ -1,91 +1,57 @@
 <script lang="ts">
-  import { defineComponent } from 'vue'
+import { defineComponent } from 'vue'
 
-  export default defineComponent({
-    methods: {
-      showOverlay(e: any) {
-        e.target.children[0].classList.add('project-overlay-show')
-      },
-      hideOverlay(e: any) {
-        e.target.children[0].classList.remove('project-overlay-show')
-      }
-    }
-  })
+export default defineComponent({
+  name: 'ProjectsSection'
+})
 </script>
 
 <template>
   <div class="projects-section px-3 mt-5 pt-5" id="proj-section">
     <h2 class="mb-4 text-muted" style="text-align: left;">Projects</h2>
+
     <div class="projects">
+      <!-- Project 1 -->
       <a
-        @mouseenter="showOverlay"
-        @mouseleave="hideOverlay"
+        class="project"
         target="_blank"
+        rel="noopener noreferrer"
         href="https://enchanting-strudel-524249.netlify.app/"
-        class="project">
-        <div class="project-overlay d-none d-md-flex"></div>
-        <p class="fs-5 project-description-lg d-none px-3 d-md-flex">
-          Outdoor Furniture Shop
-        </p>
-        <p class="project-description-mobile d-flex d-md-none p-2">
-          Ecommerce Experience :Nuxt
-        </p>
+      >
+        <div class="project-text">
+          <p class="fs-6 project-title">
+            Outdoor Furniture Shop
+          </p>
+        </div>
       </a>
+
+      <!-- Project 2 -->
       <a
-        @mouseenter="showOverlay"
-        @mouseleave="hideOverlay"
+        class="project"
         target="_blank"
+        rel="noopener noreferrer"
         href="https://gifted-kepler-32c70b.netlify.app/"
-        class="project">
-        <div class="project-overlay d-none d-md-flex"></div>
-        <p class="fs-5 project-description-lg d-none px-3 d-md-flex">
-          Find Out how much house you can afford in this questionaire
-        </p>
-        <p class="project-description-mobile d-flex d-md-none p-2">
-          Mortgage Questionaire
-        </p>
+      >
+        <div class="project-text">
+          <p class="fs-6 project-title">
+            Home buying questionnaire
+          </p>
+        </div>
       </a>
+
+      <!-- Project 3 -->
       <a
-        @mouseenter="showOverlay"
-        @mouseleave="hideOverlay"
+        class="project"
         target="_blank"
+        rel="noopener noreferrer"
         href="https://affectionate-booth-7c6f42.netlify.app/"
-        class="project">
-        <div class="project-overlay d-none d-md-flex"></div>
-        <p class="fs-5 project-description-lg d-none px-3 d-md-flex">
-          Tone JS Piano App
-        </p>
-        <p class="project-description-mobile d-flex d-md-none p-2">
-          Tone JS Piano App
-        </p>
+      >
+        <div class="project-text">
+          <p class="fs-6 project-title">
+            Tone JS Piano App
+          </p>
+        </div>
       </a>
     </div>
   </div>
 </template>
-
-<style scoped>
-  .projects-section {
-    margin-bottom: 2rem;
-    position: relative;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem;
-    /* Light mode gradient background */
-  }
-
-  h2 {
-    color: var(--text-muted);
-  }
-
-  /* Legacy section-bg styles (can be removed if not used elsewhere) */
-  .section-bg {
-    margin-bottom: 2rem;
-    position: relative;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem;
-    background: var(--bg-secondary);
-  }
-
-  :global(.night-mode-wrapper) .section-bg {
-    background: var(--bg-primary);
-  }
-</style>
