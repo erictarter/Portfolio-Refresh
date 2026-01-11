@@ -34,7 +34,7 @@ export default defineComponent({
       >
         <div class="project-text">
           <p class="fs-6 project-title">
-            Home buying questionnaire
+            Home Buying Questionnaire
           </p>
         </div>
       </a>
