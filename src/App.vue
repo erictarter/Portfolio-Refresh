@@ -23,12 +23,12 @@
     <main>
     <Bio />
     <Skills :darkMode="toggleState" />
-    <Projects />
-    <Poll />
-    <Credit />
+    <!-- <Projects /> -->
+    <!-- <Poll /> -->
+    <!-- <Credit /> -->
     </main>
     <Footer />
-    <PollModal />
+    <!-- <PollModal /> -->
   </div>
 
   <div :class="toggleState ? 'night-mode' : 'day-mode'"></div>

@@ -49,11 +49,11 @@
           @mouseleave="animationLeave"
           href="#skills-section"
           class="nav-item mx-1"
-          >Skills</a
+          >Expertise</a
         >
         <div class="border-animation-large"></div>
       </div>
-      <div class="d-flex flex-column mx-1">
+      <!-- <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
@@ -62,8 +62,8 @@
           >Projects</a
         >
         <div class="border-animation-large"></div>
-      </div>
-      <div class="d-flex flex-column mx-1">
+      </div> -->
+      <!-- <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"
           @mouseleave="animationLeave"
@@ -72,7 +72,7 @@
           >Community</a
         >
         <div class="border-animation-large"></div>
-      </div>
+      </div> -->
       <div class="d-flex flex-column mx-1">
         <a
           @mouseenter="borderAnimation"

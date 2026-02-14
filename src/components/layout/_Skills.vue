@@ -6,7 +6,7 @@
 
 <template>
   <div class="skills-section mx-3 mt-5" id="skills-section">
-    <h2 class="mb-4 text-muted">Skills</h2>
+    <h2 class="mb-4 text-muted">Expertise</h2>
     
     <!-- Frontend Technologies -->
     <div class="mt-4">
@@ -65,7 +65,7 @@
 
     <!-- Other Expertise -->
     <div class="mt-5">
-      <h3 class="mb-3 text-muted">Other Expertise</h3>
+      <h3 class="mb-3 text-muted">Other</h3>
       <div class="row g-3">
         <div class="col-6 col-md-4">
           <div class="skill-item-text">

@@ -75,11 +75,11 @@
             @mouseleave="animationLeave"
             @click="navToggle"
             class="nav-item my-2"
-            >Skills</a
+            >Expertise</a
           >
           <div class="border-animation mx-2"></div>
         </div>
-        <div class="d-flex flex-column mx-2">
+        <!-- <div class="d-flex flex-column mx-2">
           <a
             href="#proj-section"
             @mouseenter="borderAnimation"
@@ -89,8 +89,8 @@
             >Projects</a
           >
           <div class="border-animation mx-2"></div>
-        </div>
-        <div class="d-flex flex-column mx-2">
+        </div> -->
+        <!-- <div class="d-flex flex-column mx-2">
           <a
             href="#poll-section"
             @mouseenter="borderAnimation"
@@ -100,7 +100,7 @@
             >Community</a
           >
           <div class="border-animation mx-2"></div>
-        </div>
+        </div> -->
         <div class="d-flex flex-column mx-2">
           <a
             href="#footer-section"
